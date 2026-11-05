@@ -147,6 +147,34 @@
   .masonry .card { width:100%; margin-bottom:0.8rem; display:flex; break-inside:avoid; }
   @media(max-width:900px){ .masonry{column-count:3;} }
   @media(max-width:600px){ .masonry{column-count:2;} }
+
+  /* Mobile clarity improvements: desktop styles remain unchanged */
+  .tool-mark { display:none; }
+  @media (max-width:600px) {
+    html, body { max-width:100%; overflow-x:hidden; }
+    .wrap { padding:1rem 0.75rem 2rem; }
+    .honey-wrap { width:100%; max-width:100%; padding:0.4rem 0; }
+    .honey-row,
+    .honey-row:first-child { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; width:100%; margin:0 0 12px; }
+    .honey-cell { width:100%; min-width:0; height:128px; margin:0; border:1px solid rgba(201,162,76,0.45); border-radius:12px; }
+    .honey-cell::before, .honey-cell::after { display:none; }
+    .honey-cell .hc-bg .tint { opacity:0.35; }
+    .honey-cell .hc-bg .vig { background:linear-gradient(180deg,rgba(0,0,0,0.04) 0%,rgba(0,0,0,0.62) 100%); }
+    .honey-cell .hc-name { position:absolute; bottom:8px; left:4px; right:4px; padding:0 4px; font-size:13px; line-height:1.25; min-height:30px; display:flex; align-items:center; justify-content:center; overflow-wrap:anywhere; text-shadow:0 1px 5px rgba(0,0,0,.95); }
+    .tool-mark { position:absolute; display:flex; align-items:center; justify-content:center; top:13px; left:50%; transform:translateX(-50%); width:55px; height:55px; border-radius:14px; background:#f8f8fa; box-shadow:0 3px 12px rgba(0,0,0,.45); z-index:3; overflow:hidden; }
+    .tool-mark-fallback { color:#1b233d; font:900 18px 'Segoe UI',Arial,sans-serif; letter-spacing:-.6px; }
+    .tool-mark img { position:absolute; inset:7px; width:calc(100% - 14px); height:calc(100% - 14px); object-fit:contain; background:#f8f8fa; }
+    .sec-grid, .dash-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); gap:12px; }
+    .card { min-width:0; min-height:128px; }
+    .card .card-name { position:absolute; bottom:8px; left:3px; right:3px; font-size:13px; line-height:1.25; padding:0 4px; }
+    .row-scroll .card { width:150px; height:128px; }
+    .spider-node .tool-mark { top:50%; left:50%; transform:translate(-50%,-50%); width:95%; height:95%; border-radius:50%; box-shadow:none; }
+    .spider-node .tool-mark img { inset:3px; width:calc(100% - 6px); height:calc(100% - 6px); }
+    .spider-node .tool-mark-fallback { font-size:10px; }
+    .spider-label { font-size:7px; }
+    .masonry { column-count:2; }
+    .switch-btn { min-height:36px; }
+  }
 </style>
 </head>
 <body>
@@ -217,6 +245,16 @@ const TOOLS = [
 
 const cats = [...new Set(TOOLS.map(t => t.cat))];
 
+
+function toolMarkHTML(t) {
+  // Show the public website favicon on phones, with a readable initials fallback.
+  let host = '';
+  try { if (/^https?:\/\//i.test(t.url)) host = new URL(t.url).hostname; } catch (e) {}
+  const initials = t.name.replace(/[^\p{L}\p{N} ]/gu, '').split(/\s+/).filter(Boolean).map(w => w[0]).join('').slice(0,2).toUpperCase() || 'AI';
+  const icon = host ? `<img src="https://www.google.com/s2/favicons?domain=${encodeURIComponent(host)}&sz=128" alt="" loading="lazy" decoding="async" onerror="this.remove()">` : '';
+  return `<span class="tool-mark" aria-hidden="true"><span class="tool-mark-fallback">${initials}</span>${icon}</span>`;
+}
+
 function cardHTML(t) {
   return `
   <a class="card" href="${t.url}" target="_blank" rel="noopener">
@@ -226,7 +264,8 @@ function cardHTML(t) {
       <div class="vig"></div>
       <div class="fade"></div>
     </div>
-    ${t.risk ? '<span class="risk-badge">&#9888;</span>' : ''}
+    ${toolMarkHTML(t)}
+     ${t.risk ? '<span class="risk-badge">&#9888;</span>' : ''}
     <div class="card-name">${t.name}</div>
   </a>`;
 }
@@ -289,6 +328,7 @@ function renderSpider() {
     nodes += `
     <a class="spider-node" href="${t.url}" target="_blank" rel="noopener" style="left:${x}%; top:${y}%;">
       <div class="sn-bg"><img src="${BG_IMG}" alt=""><div class="tint" style="background:${t.color};"></div><div class="vig"></div></div>
+       ${toolMarkHTML(t)}
     </a>`;
     labels += `<div class="spider-label" style="left:${x}%; top:${y}%;">${t.name}</div>`;
   });
@@ -316,7 +356,8 @@ function renderHoney() {
       ${row.map(t => `
       <a class="honey-cell ${(honeyFilter!=='All' && t.cat!==honeyFilter)?'dim':''}" href="${t.url}" target="_blank" rel="noopener">
         <div class="hc-bg"><img src="${BG_IMG}" alt=""><div class="tint" style="background:${t.color};"></div><div class="vig"></div></div>
-        <div class="hc-name">${t.name}</div>
+        ${toolMarkHTML(t)}
+         <div class="hc-name">${t.name}</div>
       </a>`).join('')}
     </div>`).join('');
   return `<div class="honey-filters">${filterBtns}</div><div class="honey-wrap">${rowsHTML}</div>`;
@@ -329,7 +370,8 @@ function renderMasonry() {
     return `
     <a class="card" href="${t.url}" target="_blank" rel="noopener" style="height:${h}px;">
       <div class="card-bg"><img src="${BG_IMG}" alt=""><div class="tint" style="background:${t.color};"></div><div class="vig"></div><div class="fade"></div></div>
-      ${t.risk ? '<span class="risk-badge">&#9888;</span>' : ''}
+      ${toolMarkHTML(t)}
+     ${t.risk ? '<span class="risk-badge">&#9888;</span>' : ''}
       <div class="card-name">${t.name}</div>
     </a>`;
   }).join('') + `</div>`;
