@@ -264,6 +264,58 @@ html{scroll-padding-top:95px}
 @media(max-width:770px){.header-inner{height:75px}.hero{padding-top:127px}.visual-heading{grid-template-columns:1fr!important;gap:20px!important}.editorial-photo{height:205px;width:100%;max-width:none;transform:none}.academic-section .editorial-photo{height:205px;transform:none;border-radius:16px 38px 16px 38px}.partner-grid{grid-template-columns:1fr}.credential-brand-logos{flex-wrap:wrap}.credential-brand-showcase{padding:25px}.creative-scene,.resource-image-hero{min-height:250px}.creative-scene-message,.resource-image-hero>div{padding:28px;gap:12px}.creative-scene-message strong,.resource-image-hero>div strong{font-size:30px}.closing-inner{padding-right:0;min-height:310px;align-items:flex-start}.closing-portrait{right:-55px;bottom:-135px;width:255px;opacity:.38}.resource-image-hero-count{display:none}.section h2{font-size:clamp(30px,8vw,44px)}}
 @media(max-width:425px){.credential-brand-logos{gap:8px}.brand-showcase-logo,.brand-showcase-word{height:56px;min-width:70px;padding:8px}.shrm-showcase{min-width:100px}.creative-scene-message strong,.resource-image-hero>div strong{font-size:27px}.academic-quicklink strong{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.editorial-photo img,.creative-scene img,.resource-image-hero>img{transition:none!important}}
+
+/* Correct image treatment: no upscaling vertical photos into panoramic crops or text over faces */
+.section-heading.visual-heading{align-items:center}
+.editorial-photo{height:auto!important;min-height:0!important;max-width:380px;box-shadow:0 12px 34px rgba(9,29,54,.10);border-radius:18px!important;overflow:hidden;transform:none!important;clip-path:none!important;background:#f2f4f8}
+.editorial-photo:after{display:none!important}
+.editorial-photo>img{height:216px!important;width:100%;display:block;object-fit:contain!important;object-position:center!important;background:#e8edf3;transform:none!important;filter:none}
+.editorial-photo>figcaption{position:static!important;inset:auto!important;display:flex;justify-content:space-between;align-items:center;background:#fff;color:#173052!important;padding:13px 15px;font-size:11px}
+.editorial-photo>figcaption span{color:#a97c29}
+#career .editorial-photo{max-width:295px;margin-left:auto}
+#career .editorial-photo>img{height:290px!important;object-fit:contain!important;background:#182f4a}
+#partners .editorial-photo>img{object-fit:contain!important;background:#e6edf4}
+#campaigns .editorial-photo>img{object-fit:contain!important;background:#172a42}
+/* Academic qualifications require relevant academic illustration, not an unrelated event photo */
+.academic-illustration{position:relative;height:258px;width:100%;min-width:0;border-radius:22px 44px 22px 44px;overflow:hidden;isolation:isolate;background:linear-gradient(140deg,#071b37,#173b62);display:flex;align-items:center;flex-direction:column;justify-content:center;gap:13px;box-shadow:0 20px 43px rgba(8,29,55,.18)}
+.academic-illustration:after{content:"";position:absolute;inset:17px;border:1px solid rgba(219,182,93,.3);border-radius:17px 39px 17px 39px;z-index:-1}
+.academic-glow{position:absolute;width:280px;height:280px;border:1px solid rgba(219,182,93,.22);border-radius:50%;top:-145px;right:-120px;box-shadow:0 0 0 45px rgba(219,182,93,.04)}
+.academic-glyph{position:absolute;top:19px;right:26px;font-size:26px;color:#d7ab52}
+.academic-visual-topline{font-size:10px;font-weight:900;letter-spacing:.2em;color:#d7af65;text-align:center}
+.academic-visual-degrees{display:flex;align-items:center;justify-content:center;gap:10px}
+.academic-visual-degrees span{display:grid;place-items:center;min-width:77px;min-height:74px;padding:10px;background:rgba(255,255,255,.08);border:1px solid rgba(238,195,105,.32);border-radius:12px;color:#fff;font-size:23px;letter-spacing:-.04em;font-weight:850}
+.academic-visual-degrees span.dba-visual{background:#d6ae59;color:#071a36}
+.academic-visual-subtitle{font-size:11px;color:#bbcadc;font-weight:750;letter-spacing:.02em;text-align:center}
+.academic-visual-subtitle i{color:#d6ae59;margin:0 4px;font-style:normal}
+/* Expertise and resources: photographic halves display original, complete subjects */
+#expertise .creative-scene-left,.resources-wrap .resource-image-hero{display:grid!important;grid-template-columns:42% 58%;min-height:320px!important;height:auto!important;align-items:stretch;isolation:isolate;overflow:hidden;background:#0c2342;margin:20px 0 32px}
+#expertise .creative-scene-left:before,.resources-wrap .resource-image-hero:before{display:none!important}
+#expertise .creative-scene-left>img,.resources-wrap .resource-image-hero>img{position:relative!important;inset:auto!important;width:100%!important;height:330px!important;min-height:0!important;object-fit:contain!important;object-position:center!important;z-index:auto!important;transform:none!important;filter:none!important;background:#e3e8ec}
+#expertise .creative-scene-left>.creative-scene-message,.resources-wrap .resource-image-hero>div{position:relative!important;width:100%!important;align-self:stretch;display:flex;flex-direction:column;justify-content:center;padding:42px!important;gap:17px;background:radial-gradient(circle at 100% 0%,#224369,#0b203e 67%);z-index:1}
+#expertise .creative-scene-left>.creative-scene-index{right:28px;bottom:20px;z-index:2}
+.resources-wrap .resource-image-hero-count{right:25px;bottom:20px;z-index:2}
+/* Recognition: use natural panorama aspect ratio and separate text, never cover people */
+#recognition .creative-scene-trust{display:flex!important;flex-direction:column;align-items:stretch;justify-content:initial;min-height:0!important;height:auto!important;background:#0b203d;border-radius:21px;overflow:hidden}
+#recognition .creative-scene-trust:before{display:none!important}
+#recognition .creative-scene-trust>img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center!important;z-index:auto!important;filter:none!important;transform:none!important;display:block}
+#recognition .creative-scene-trust>.creative-scene-message{width:100%;max-width:none;flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:13px;padding:23px 29px!important;background:linear-gradient(90deg,#0b213d,#142f50)}
+#recognition .creative-scene-trust>.creative-scene-message strong{font-size:clamp(18px,2.4vw,29px);line-height:1.3}
+#recognition .creative-scene-trust>.creative-scene-message small{max-width:235px}
+@media(max-width:770px){
+ .editorial-photo{max-width:none;width:100%;margin:0!important}
+ #career .editorial-photo{max-width:100%!important}
+ #career .editorial-photo>img{height:300px!important}
+ .academic-illustration{height:240px}
+ #expertise .creative-scene-left,.resources-wrap .resource-image-hero{grid-template-columns:1fr!important;min-height:0!important}
+ #expertise .creative-scene-left>img,.resources-wrap .resource-image-hero>img{height:255px!important;width:100%!important}
+ #expertise .creative-scene-left>.creative-scene-message,.resources-wrap .resource-image-hero>div{padding:26px!important;min-height:200px}
+ #recognition .creative-scene-trust>.creative-scene-message{padding:19px!important;flex-direction:column;align-items:flex-start}
+ #recognition .creative-scene-trust>.creative-scene-message strong{font-size:24px}
+}
+/* Reliability: editorial pictures and section titles are always visible, including reduced-motion or delayed observers */
+.js-motion .section-heading,.js-motion .editorial-photo,.js-motion .creative-scene,.js-motion .resource-image-hero,.js-motion .academic-illustration,.js-motion .credential-brand-showcase{opacity:1!important;transform:none!important}
+.brand-shrm .cert-logo img,.cert-logo:has(img[src*="shrm-mark"]) img{width:118px!important;height:55px!important;object-fit:contain!important;padding:2px!important;background:#f5f7fb!important}
+.shrm-showcase img{object-fit:contain!important}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
@@ -303,7 +355,13 @@ html{scroll-padding-top:95px}
     <div class="strip-item"><div class="strip-icon">↗</div><div><b><span class="counter" data-counter="6800" data-suffix="+">6,800+</span> Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
   </div>
 </div>
-<section class="section academic-section" id="academic-qualifications"><div class="shell"><div class="section-heading visual-heading"><div><div class="section-kicker">ACADEMIC QUALIFICATIONS</div><h2>Advanced business education.</h2><p class="section-intro">Doctoral and postgraduate qualifications underpinning a multidisciplinary approach to business consulting, strategic leadership and organizational transformation.</p></div><figure class="editorial-photo"><img src="./gallery/03-youth-development.jpg" alt="Professional learning and youth development event with Dr. Saied" loading="lazy" decoding="async"><figcaption>Knowledge that travels further<span aria-hidden="true">↗</span></figcaption></figure></div><div class="academic-grid"><article class="academic-card academic-featured"><div class="academic-card-top"><span class="academic-icon" aria-hidden="true">DBA</span><span class="academic-tag">DOCTORAL DEGREE</span></div><h3>Doctor of Business Administration</h3><p class="academic-abbr">DBA</p><div class="academic-institute"><strong>Faculty of Commerce</strong><span>Benha University</span></div></article>
+<section class="section academic-section" id="academic-qualifications"><div class="shell"><div class="section-heading visual-heading"><div><div class="section-kicker">ACADEMIC QUALIFICATIONS</div><h2>Advanced business education.</h2><p class="section-intro">Doctoral and postgraduate qualifications underpinning a multidisciplinary approach to business consulting, strategic leadership and organizational transformation.</p></div><div class="academic-illustration" role="img" aria-label="Three academic qualifications: one DBA from Benha University Faculty of Commerce, and two MBAs from Benha University and CMU-CIC">
+  <div class="academic-glow" aria-hidden="true"></div>
+  <div class="academic-glyph" aria-hidden="true">✦</div>
+  <div class="academic-visual-topline">ACADEMIC MILESTONES</div>
+  <div class="academic-visual-degrees"><span class="dba-visual">DBA</span><span>MBA</span><span>MBA</span></div>
+  <div class="academic-visual-subtitle">Benha University <i>•</i> CMU-CIC</div>
+</div></div><div class="academic-grid"><article class="academic-card academic-featured"><div class="academic-card-top"><span class="academic-icon" aria-hidden="true">DBA</span><span class="academic-tag">DOCTORAL DEGREE</span></div><h3>Doctor of Business Administration</h3><p class="academic-abbr">DBA</p><div class="academic-institute"><strong>Faculty of Commerce</strong><span>Benha University</span></div></article>
 <article class="academic-card"><div class="academic-card-top"><span class="academic-icon" aria-hidden="true">MBA</span><span class="academic-tag">MASTER'S DEGREE</span></div><h3>Master of Business Administration</h3><p class="academic-abbr">MBA</p><div class="academic-institute"><strong>Benha University</strong><span>Egypt</span></div></article>
 <article class="academic-card"><div class="academic-card-top"><span class="academic-icon" aria-hidden="true">MBA</span><span class="academic-tag">MASTER'S DEGREE</span></div><h3>Master of Business Administration</h3><p class="academic-abbr">MBA</p><div class="academic-institute"><strong>CMU-CIC</strong><span>Institution as provided</span></div></article></div></div></section>
 
@@ -428,7 +486,7 @@ html{scroll-padding-top:95px}
       <div class="credential-brand-showcase" aria-label="Professional learning partners: IBM, SHRM, SAP, AIHR">
   <div class="credential-brand-intro"><span>PROFESSIONAL DEVELOPMENT</span><strong>Business knowledge.<br>Global perspectives.</strong><small>Selected providers and learning institutions</small></div>
   <div class="credential-brand-logos"><div class="brand-showcase-logo ibm-showcase"><img src="./assets/ibm-provided.png" alt="IBM logo supplied by portfolio owner" loading="lazy"></div>
-    <div class="brand-showcase-logo shrm-showcase"><img src="./assets/shrm-provided.png" alt="SHRM affiliate logo supplied by portfolio owner" loading="lazy"></div>
+    <div class="brand-showcase-logo shrm-showcase"><img src="./assets/shrm-mark.png" alt="SHRM affiliate logo supplied by portfolio owner" loading="lazy"></div>
     <div class="brand-showcase-word sap-showcase" aria-label="SAP">SAP</div><div class="brand-showcase-word aihr-showcase" aria-label="AIHR">AIHR</div>
   </div>
 </div>
@@ -465,7 +523,7 @@ html{scroll-padding-top:95px}
 <article class="cert-card credential-card brand-shrm" data-cert-category="hr">
   <div class="cert-top">
     <div class="cert-logo" aria-label="SHRM identity">
-      <img src="./assets/shrm-provided.png" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <img src="./assets/shrm-mark.png" alt="" width="36" height="36" loading="lazy" decoding="async">
       <span class="cert-brand-wordmark">SHRM</span>
     </div>
     <span class="cert-kind">HR DEVELOPMENT</span>
@@ -520,7 +578,7 @@ html{scroll-padding-top:95px}
 <article class="cert-card credential-card brand-shrm" data-cert-category="hr">
   <div class="cert-top">
     <div class="cert-logo" aria-label="SHRM Learning identity">
-      <img src="./assets/shrm-provided.png" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <img src="./assets/shrm-mark.png" alt="" width="36" height="36" loading="lazy" decoding="async">
       <span class="cert-brand-wordmark">SHRM Learning</span>
     </div>
     <span class="cert-kind">HR LEARNING</span>
@@ -599,7 +657,7 @@ html{scroll-padding-top:95px}
   </section>
   <section class="section" id="partners">
     <div class="shell">
-      <div class="section-heading visual-heading"><div><div class="section-kicker">SELECTED ORGANIZATIONS & BRANDS</div><h2>Cross-industry exposure.</h2><p class="section-intro">The portfolio presents the following organizations across consulting, recruitment, training and business-support contexts. This is a selected partners-and-clients list, not a claim of direct employment at each organization.</p></div><figure class="editorial-photo"><img src="./gallery/01-executive-workshop.jpg" alt="Business meeting and professional collaboration in an executive workshop" loading="lazy" decoding="async"><figcaption>Cross-sector collaboration<span aria-hidden="true">↗</span></figcaption></figure></div>
+      <div class="section-heading visual-heading"><div><div class="section-kicker">SELECTED ORGANIZATIONS & BRANDS</div><h2>Cross-industry exposure.</h2><p class="section-intro">The portfolio presents the following organizations across consulting, recruitment, training and business-support contexts. This is a selected partners-and-clients list, not a claim of direct employment at each organization.</p></div><figure class="editorial-photo"><img src="./gallery/03-youth-development.jpg" alt="Dr. Saied at a professional group development event" loading="lazy" decoding="async"><figcaption>Cross-sector engagement<span aria-hidden="true">↗</span></figcaption></figure></div>
       <div class="partner-grid">
         <div class="partner-card"><div class="partner-cat">BANKING & FINANCE</div><div class="partner-names partner-chips"><span>National Bank of Egypt</span><span>Bank of Palestine</span><span>Industrial Bank of Kuwait</span></div></div>
         <div class="partner-card"><div class="partner-cat">FMCG & FOOD</div><div class="partner-names">Kellogg's · Temmy's · Bayara · Rich Bake · Mass Food · Friday Ice Cream · Sinai Rose</div></div>
@@ -769,7 +827,7 @@ html{scroll-padding-top:95px}
   var supportsIO=("IntersectionObserver" in window);
   if(!reduced&&supportsIO){
     document.documentElement.classList.add("js-motion");
-    var elements=Array.prototype.slice.call(document.querySelectorAll(".section-heading,.editorial-photo,.creative-scene,.resource-image-hero,.credential-brand-showcase,.achievement,.career-entry,.expertise-card,.academic-card,.cert-card,.partner-card,.training-gallery-card,.campaign-grid>div,.quote-grid blockquote,.resource-panel"));
+    var elements=Array.prototype.slice.call(document.querySelectorAll(".achievement,.career-entry,.expertise-card,.academic-card,.cert-card,.partner-card,.training-gallery-card,.campaign-grid>div,.quote-grid blockquote,.resource-panel"));
     var reveal=new IntersectionObserver(function(entries){
       entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("is-visible");reveal.unobserve(entry.target)}});
     },{threshold:.07,rootMargin:"0px 0px -25px 0px"});
