@@ -361,6 +361,18 @@ html{scroll-padding-top:95px}
 .prior-hospitality strong{color:#182d49}
 @media(min-width:1050px){.hospitality-experience-card{grid-column:span 2}.hospitality-card-body{align-items:center}}
 @media(max-width:700px){.hospitality-card-body{padding:17px;gap:12px}.hospitality-icon{width:40px;height:40px;flex-basis:40px}.hotel-brand{font-size:10px}}
+
+/* Uniform, accessible learning-provider logo wall: identical four tiles */
+.credential-brand-showcase>.credential-brand-logos{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:10px!important;align-items:stretch!important;width:100%!important;max-width:100%!important;min-width:0!important;margin:0!important;padding:0!important}
+.credential-brand-logos>.learning-brand-tile{box-sizing:border-box!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:space-between!important;gap:5px!important;min-width:0!important;width:100%!important;height:110px!important;min-height:110px!important;max-height:110px!important;overflow:hidden!important;padding:12px 9px 9px!important;border:1px solid rgba(226,234,245,.22)!important;border-radius:12px!important;background:rgba(255,255,255,.055)!important}
+.credential-brand-logos>.learning-brand-tile>.learning-brand-art{box-sizing:border-box!important;flex:0 0 59px!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;max-width:100%!important;height:59px!important;min-height:59px!important;max-height:59px!important;overflow:hidden!important;padding:4px!important;background:transparent!important;border:none!important;border-radius:0!important}
+.credential-brand-logos .learning-brand-art img{position:static!important;display:block!important;width:100%!important;max-width:100%!important;height:100%!important;max-height:100%!important;min-width:0!important;min-height:0!important;object-fit:contain!important;object-position:center center!important;border-radius:0!important;filter:none!important;transform:none!important;box-shadow:none!important;padding:0!important;margin:0!important;inset:auto!important}
+.credential-brand-logos .learning-shrm-art{background:#f6f7f5!important;border-radius:5px!important}
+.credential-brand-logos .learning-brand-label{font-size:9px!important;line-height:1.4!important;font-weight:800!important;color:#e0eafa!important;letter-spacing:.13em!important;text-align:center!important;white-space:nowrap!important;overflow:hidden!important}
+.credential-brand-logos .learning-textmark{font-size:25px!important;font-weight:900!important;line-height:1!important;text-align:center!important}
+.credential-brand-logos .learning-sap-text{color:#d3eaff!important;font-style:italic!important}
+.credential-brand-logos .learning-aihr-text{color:#f0bb63!important;letter-spacing:0!important;font-size:21px!important}
+@media(max-width:480px){.credential-brand-showcase>.credential-brand-logos{grid-template-columns:repeat(2,minmax(0,1fr))!important}.credential-brand-logos>.learning-brand-tile{height:100px!important;min-height:100px!important;max-height:100px!important}.credential-brand-logos>.learning-brand-tile>.learning-brand-art{height:53px!important;min-height:53px!important;max-height:53px!important;flex-basis:53px!important}}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
@@ -530,9 +542,11 @@ html{scroll-padding-top:95px}
       <div class="section-heading"><div><div class="section-kicker">PROFESSIONAL CREDENTIALS</div><h2>Credentials that power business impact.</h2><p class="section-intro">A curated record of professional certifications and continuing learning across SAP, HR, business, analytics and artificial intelligence.</p></div></div>
       <div class="credential-brand-showcase" aria-label="Professional learning partners: IBM, SHRM, SAP, AIHR">
   <div class="credential-brand-intro"><span>PROFESSIONAL DEVELOPMENT</span><strong>Business knowledge.<br>Global perspectives.</strong><small>Selected providers and learning institutions</small></div>
-  <div class="credential-brand-logos"><div class="brand-showcase-logo ibm-showcase"><img src="./assets/ibm-provided.png" alt="IBM logo supplied by portfolio owner" loading="lazy"></div>
-    <div class="brand-showcase-logo shrm-showcase"><img src="./assets/shrm-mark.png" alt="SHRM affiliate logo supplied by portfolio owner" loading="lazy"></div>
-    <div class="brand-showcase-word sap-showcase" aria-label="SAP">SAP</div><div class="brand-showcase-word aihr-showcase" aria-label="AIHR">AIHR</div>
+  <div class="credential-brand-logos" aria-label="Selected professional learning providers">
+    <div class="learning-brand-tile"><span class="learning-brand-art learning-ibm-art"><img src="./assets/ibm-provided.png" alt="IBM logo" loading="lazy" decoding="async"></span><span class="learning-brand-label">IBM</span></div>
+    <div class="learning-brand-tile"><span class="learning-brand-art learning-shrm-art"><img src="./assets/shrm-mark.png" alt="SHRM logo" loading="lazy" decoding="async"></span><span class="learning-brand-label">SHRM</span></div>
+    <div class="learning-brand-tile"><span class="learning-brand-art"><span class="learning-textmark learning-sap-text">SAP</span></span><span class="learning-brand-label">SAP</span></div>
+    <div class="learning-brand-tile"><span class="learning-brand-art"><span class="learning-textmark learning-aihr-text">AIHR</span></span><span class="learning-brand-label">AIHR</span></div>
   </div>
 </div>
       <div class="cert-filter-controls" role="group" aria-label="Filter professional credentials by subject">
