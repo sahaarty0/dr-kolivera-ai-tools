@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#08152c">
-  <meta name="description" content="Dr. Saied El Saharty — HR & Business Consultant, Business Administration Instructor, Certified SAP Professional Consultant. Explore Winners webinars, AI assistant tools, and practical HR resources.">
-  <meta property="og:title" content="Dr. Saied El Saharty | HR, Business & AI Consultant">
-  <meta property="og:description" content="Strategy that works. People solutions that scale. Explore professional achievements, Winners webinars, and practical HR & AI resources.">
+  <meta name="description" content="Dr. Saied El Saharty — Business Solutions Consultant, Strategic Advisor, Executive Trainer and Certified SAP Professional Consultant. Business strategy, growth, operations, marketing, AI and HR transformation.">
+  <meta property="og:title" content="Dr. Saied El Saharty | Business Solutions & Transformation">
+  <meta property="og:description" content="Business solutions that deliver. Strategy, operations, marketing, AI and organizational transformation. Explore professional achievements, Winners webinars and practical tools.">
   <meta property="og:type" content="website">
-  <title>Dr. Saied El Saharty | HR & Business Consultant</title>
+  <title>Dr. Saied El Saharty | Business Solutions Consultant</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
@@ -89,13 +89,25 @@
 .quote-grid cite{font-size:11px;font-style:normal;font-weight:800;color:#5e7189;margin-top:auto}
 @media(max-width:980px){.career-grid{grid-template-columns:1fr 350px}.expertise-grid{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(3,1fr)}.partner-grid{grid-template-columns:repeat(2,1fr)}.quote-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:770px){.hero-panel{min-height:340px}.profile-emblem#real-photo{width:205px;height:275px}.float-card.one{right:-2px;top:8px}.float-card.two{left:0;bottom:6px}.career-grid{grid-template-columns:1fr}.expertise-grid{grid-template-columns:repeat(2,1fr);gap:9px}.expertise-card{min-height:132px;padding:17px 13px}.expertise-card b{font-size:11px}.cert-grid{grid-template-columns:repeat(2,1fr)}.cert-card{min-height:155px}.partner-grid{grid-template-columns:1fr}.campaign-grid{grid-template-columns:repeat(2,1fr)}.quote-grid{grid-template-columns:1fr}.quote-grid blockquote{min-height:160px}.career-list{padding:0 16px 15px}.career-heading{padding:23px 17px 13px}.previous-roles{padding:19px 17px}.partner-names{padding:17px}}
+
+/* Full-bleed studio hero image: no card, frame, border or shadow around the person */
+.hero{overflow:hidden;background:radial-gradient(ellipse 900px 640px at 76% 45%,#101f35 0%,#071326 73%);padding:150px 0 82px;min-height:740px}
+.hero:after{opacity:.3}
+.hero-grid{grid-template-columns:minmax(0,1.3fr) minmax(340px,.7fr);gap:0}
+.hero-grid>div:first-child{position:relative;z-index:3}
+.hero-lead{font-size:clamp(19px,2.3vw,26px);line-height:1.45;max-width:630px}
+.hero-desc{max-width:620px}
+.hero-photo-stage{position:relative;display:flex;align-items:flex-end;justify-content:center;min-height:570px;margin-top:-10px;background:none;border:none;border-radius:0;box-shadow:none;isolation:auto}
+.hero-photo-stage .hero-photo{display:block;position:relative;width:min(118%,510px);height:auto;max-height:635px;object-fit:contain;object-position:center bottom;border:0;border-radius:0;box-shadow:none;background:transparent;mix-blend-mode:screen;mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 84%,transparent 100%);filter:none}
+@media(max-width:980px){.hero-grid{grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr);gap:0}.hero-photo-stage{min-height:490px}.hero-photo-stage .hero-photo{max-height:520px}}
+@media(max-width:770px){.hero{padding:130px 0 36px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:8px}.hero-photo-stage{min-height:310px;max-height:390px;overflow:hidden;margin:5px auto -36px;width:100%}.hero-photo-stage .hero-photo{width:auto;height:420px;max-height:420px;object-position:center top}.hero-actions{margin-top:28px}.hero-lead{font-size:21px}.roles{gap:7px}}
 </style>
 </head>
 <body>
   <header class="header">
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="Saied El Saharty home">
-        <div class="brand-mark">SE</div><div class="brand-words"><span class="brand-name">DR. SAIED EL SAHARTY</span><span class="brand-sub">HR • BUSINESS • AI</span></div>
+        <div class="brand-mark">SE</div><div class="brand-words"><span class="brand-name">DR. SAIED EL SAHARTY</span><span class="brand-sub">BUSINESS • STRATEGY • AI</span></div>
       </a>
       <a class="top-cta" href="mailto:saiedsahaarty@gmail.com">Let's Connect ↗</a>
     </div>
@@ -106,25 +118,22 @@
         <div>
           <div class="eyebrow">STRATEGIC THINKING. PRACTICAL IMPACT.</div>
           <h1>Dr. Saied<br><span>El Saharty.</span></h1>
-          <div class="hero-lead">15+ years of HR leadership. Business solutions that work. AI with purpose.</div>
-          <p class="hero-desc">Strategic HR Director, Business Consultant and Business Administration Instructor with 15+ years of experience spanning Egypt and the GCC. Combining people strategy, organizational transformation and business-driven execution.</p>
-          <div class="roles"><span class="role-pill">HR &amp; Business Consulting</span><span class="role-pill">AI-Enabled HR Transformation</span><span class="role-pill">Business Administration Instructor</span></div>
+          <div class="hero-lead">Business Solutions. Strategy, Growth & Transformation.</div>
+          <p class="hero-desc">Business Solutions Consultant, Strategic Advisor and Executive Trainer with 15+ years of cross-industry experience in Egypt and the GCC. Bridging business strategy, operations, marketing, financial performance, people development and AI-driven transformation to turn challenges into practical results.</p>
+          <div class="roles"><span class="role-pill">Business Strategy &amp; Growth</span><span class="role-pill">Operations &amp; Performance</span><span class="role-pill">Marketing &amp; Business Development</span><span class="role-pill">AI &amp; Digital Transformation</span><span class="role-pill">HR &amp; Organizational Solutions</span></div>
           <div class="hero-actions">
             <button type="button" class="action primary" data-open="webinars"><span class="action-icon">▷</span> Winners Webinars <span aria-hidden="true">↗</span></button>
             <button type="button" class="action secondary" data-open="tools"><span class="action-icon">◈</span> AI Assistant Tools &amp; Materials <span aria-hidden="true">↗</span></button>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Professional portrait of Dr. Saied El Saharty">
-          <div class="orbit"></div><div class="orbit small"></div>
-          <div class="profile-emblem" id="real-photo"><img src="./dr-saied-portrait.webp" alt="Dr. Saied El Saharty in a dark professional blazer, from his executive portfolio" width="220" height="297" decoding="async" fetchpriority="high"></div>
-          <div class="float-card one"><b><span class="float-dot"></span>Strategy to Execution</b><span>Evidence-led business &amp; HR solutions</span></div>
-          <div class="float-card two"><b><span class="float-dot"></span>People × Technology</b><span>Real-world learning and digital tools</span></div>
+        <div class="hero-panel hero-photo-stage" aria-label="Studio portrait of Dr. Saied El Saharty">
+          <img class="hero-photo" src="./hero-saied.webp" alt="Dr. Saied El Saharty, business consultant, in a dark suit and white shirt" width="480" height="721" decoding="async" fetchpriority="high">
         </div>
       </div>
     </section>
     <div class="strip">
   <div class="shell strip-inner">
-    <div class="strip-item"><div class="strip-icon">✦</div><div><b>15+ Years of Experience</b><span>Strategic HR leadership, consulting and business development</span></div></div>
+    <div class="strip-item"><div class="strip-icon">✦</div><div><b>15+ Years of Experience</b><span>Business strategy, growth, operations and transformation</span></div></div>
     <div class="strip-item"><div class="strip-icon">◎</div><div><b>7,000+ Professionals Trained</b><span>Learning and capability development in Egypt and the GCC</span></div></div>
     <div class="strip-item"><div class="strip-icon">↗</div><div><b>6,800+ Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
   </div>
@@ -132,19 +141,19 @@
 <section class="section" id="achievements">
       <div class="shell">
         <div class="section-heading">
-          <div><div class="section-kicker">PROFILE HIGHLIGHTS</div><h2>Experience built on execution.</h2><p class="section-intro">A combination of strategic HR leadership, applied business consulting and hands-on capability development — with technology serving measurable business outcomes.</p></div>
+          <div><div class="section-kicker">PROFILE HIGHLIGHTS</div><h2>Experience built on execution.</h2><p class="section-intro">Integrated experience in business strategy, operational improvement, marketing, organizational transformation and capability development — supported by practical technology and measurable execution.</p></div>
         </div>
         <div class="achievements">
           <article class="achievement featured"><div class="achv-icon" aria-hidden="true">◈</div><h3>Suez Canal Authority<br>Professional Training</h3><p>HR Strategy, Governance &amp; Auditing training — practical capability building for professionals at the Suez Canal Authority.</p></article>
           <article class="achievement"><div class="achv-icon" aria-hidden="true">✦</div><h3>Certified SAP<br>Professional Consultant</h3><p>Professional expertise connecting enterprise business processes, technology and measurable organizational transformation.</p></article>
-          <article class="achievement"><div class="achv-icon" aria-hidden="true">▦</div><h3>HR Systems &amp;<br>Business Transformation</h3><p>Experience spanning organizational design, HRIS implementation, performance management, workforce planning and strategic business partnership.</p></article>
+          <article class="achievement"><div class="achv-icon" aria-hidden="true">▦</div><h3>End-to-End<br>Business Solutions</h3><p>Business strategy, operational improvement, marketing and growth, organizational transformation, performance systems and AI-enabled execution.</p></article>
         </div>
       </div>
     </section>
     
   <section class="section profile-deep" id="career">
     <div class="shell">
-      <div class="section-heading"><div><div class="section-kicker">EXECUTIVE PROFILE</div><h2>Leadership across industries.</h2><p class="section-intro">An executive career spanning HR business partnership, enterprise restructuring, consulting, training and business development.</p></div></div>
+      <div class="section-heading"><div><div class="section-kicker">EXECUTIVE PROFILE</div><h2>Cross-industry business leadership.</h2><p class="section-intro">A professional career spanning strategic management, business growth, operations, organizational transformation, consulting, executive training and business development.</p></div></div>
       <div class="career-grid">
         <div class="career-main">
           <div class="career-heading"><span class="small-bullet"></span><span>SELECTED LEADERSHIP & PROFESSIONAL ROLES</span></div>
@@ -161,12 +170,12 @@
         <div class="career-aside">
           <div class="career-aside-head">SPECIALIZED FOCUS</div>
           <ul class="check-list">
-            <li>HRIS implementation and transformation</li>
-            <li>Organizational restructuring and workforce planning</li>
-            <li>Strategic HR leadership and people strategy</li>
-            <li>Training and capability development</li>
-            <li>AI awareness and business applications</li>
-            <li>Business consulting and strategy execution</li>
+            <li>Business strategy, growth and commercial execution</li>
+            <li>Operations, organizational processes and efficiency</li>
+            <li>Marketing strategy and digital campaign performance</li>
+            <li>AI automation and digital transformation</li>
+            <li>HR, organizational design and people strategy</li>
+            <li>Management training and capability development</li>
           </ul>
           <div class="systems-box"><span>SYSTEMS EXPERIENCE</span><strong>Odoo <i></i> Oracle <i></i> SAP <i></i> Maestro</strong></div>
         </div>
@@ -177,14 +186,14 @@
     <div class="shell">
       <div class="section-kicker">CORE EXPERTISE</div><h2>Strategy meets delivery.</h2>
       <div class="expertise-grid">
-        <div class="expertise-card"><span>01</span><b>Strategic HR Management</b></div>
-        <div class="expertise-card"><span>02</span><b>Talent Acquisition & Recruitment Outsourcing</b></div>
-        <div class="expertise-card"><span>03</span><b>Learning & Development</b></div>
-        <div class="expertise-card"><span>04</span><b>Organizational Development & Restructuring</b></div>
-        <div class="expertise-card"><span>05</span><b>HR Operations, Payroll & Personnel</b></div>
-        <div class="expertise-card"><span>06</span><b>HRIS Implementation</b></div>
-        <div class="expertise-card"><span>07</span><b>Business Consulting & Strategic Planning</b></div>
-        <div class="expertise-card"><span>08</span><b>Recruitment Marketing & Employer Branding</b></div>
+        <div class="expertise-card"><span>01</span><b>Business Strategy &amp; Strategic Planning</b></div>
+        <div class="expertise-card"><span>02</span><b>Operations &amp; Business Process Improvement</b></div>
+        <div class="expertise-card"><span>03</span><b>Marketing Strategy &amp; Business Development</b></div>
+        <div class="expertise-card"><span>04</span><b>Digital Transformation &amp; AI Solutions</b></div>
+        <div class="expertise-card"><span>05</span><b>Organizational Development &amp; HR Strategy</b></div>
+        <div class="expertise-card"><span>06</span><b>Talent, Recruitment &amp; Workforce Solutions</b></div>
+        <div class="expertise-card"><span>07</span><b>Financial Performance &amp; Business Analytics</b></div>
+        <div class="expertise-card"><span>08</span><b>Training &amp; Capability Building</b></div>
       </div>
     </div>
   </section>
@@ -263,7 +272,7 @@
     </section>
     <section class="closing" id="contact">
       <div class="shell closing-inner">
-        <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Consulting, executive training, HR transformation and practical AI adoption — grounded in the reality of the workplace.</p></div>
+        <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Business consulting, strategic planning, growth and marketing, operating-model improvement, organizational transformation, professional training and practical AI adoption — grounded in real business needs.</p></div>
         <a class="action primary" href="mailto:saiedsahaarty@gmail.com?subject=Consulting%20%26%20Collaboration%20Inquiry">Get in Touch ↗</a>
       </div>
     </section>
