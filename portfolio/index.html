@@ -30,7 +30,66 @@
     .overlay{position:fixed;inset:0;background:rgba(5,14,28,.73);z-index:100;display:none;align-items:center;justify-content:center;padding:22px;backdrop-filter:blur(5px)}.overlay.open{display:flex}.modal{background:#f9fafc;color:var(--ink);border:1px solid #fff;border-radius:22px;width:min(980px,100%);max-height:min(88vh,960px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 35px 110px rgba(0,0,0,.36)}.modal-head{padding:26px 30px 22px;display:flex;justify-content:space-between;align-items:start;border-bottom:1px solid var(--line);background:#fff;gap:15px}.modal-kicker{font-size:10px;color:var(--gold2);letter-spacing:.16em;font-weight:800}.modal h2{font-size:clamp(20px,3vw,29px);margin:8px 0 4px;letter-spacing:-.035em;color:var(--navy)}.modal-sub{font-size:11px;color:#6f7d92}.close-btn{background:#f3f5f9;border:1px solid #e6ebf2;color:#253b54;display:grid;place-items:center;font-size:21px;border-radius:50%;width:39px;height:39px;flex-shrink:0}.close-btn:hover{background:#e6ebf2}.modal-toolbar{padding:17px 29px;border-bottom:1px solid var(--line);background:#fff;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center}.search-wrap{width:min(350px,100%);position:relative}.search-wrap input{background:#f7f9fc;border:1px solid #e0e6ee;border-radius:9px;padding:12px 14px 12px 40px;width:100%;font-size:12px;color:var(--ink);outline:none}.search-wrap input:focus{border-color:var(--gold2)}.search-mark{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:#8795a7}.tabs{display:flex;gap:5px}.tab{font-size:10px;font-weight:800;border:1px solid transparent;padding:10px 13px;border-radius:8px;background:transparent;color:#69778b}.tab.active{background:#eff3f9;color:var(--navy);border-color:#dee6f0}.modal-body{padding:21px 28px 34px;overflow:auto;min-height:100px}.item-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.item{min-width:0;background:#fff;border-radius:12px;border:1px solid #e5eaf0;padding:19px;display:flex;flex-direction:column;gap:13px;transition:.18s}.item:hover{border-color:#d9c18d;box-shadow:0 7px 22px rgba(11,35,64,.05)}.item-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}.item-tag{font-size:9px;color:#9a762e;font-weight:800;letter-spacing:.055em;text-transform:uppercase}.item-number{color:#a3adba;font-size:10px;font-weight:800}.item h3{font-size:14px;line-height:1.55;color:var(--navy);margin:0;overflow-wrap:anywhere}.item p{color:#687990;font-size:11px;line-height:1.65;margin:0}.item-bottom{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px}.item-link{font-size:11px;font-weight:800;color:#163f70;display:inline-flex;align-items:center;gap:7px}.item-link:hover{text-decoration:underline}.item-link[aria-disabled="true"]{color:#a1a9b6;pointer-events:none;cursor:not-allowed}.item-status{color:#8f9aaa;font-size:9px;text-align:right}.empty{padding:30px;text-align:center;color:#69788d;font-size:13px;grid-column:1/-1}.modal-foot{padding:13px 29px;background:#f1f4f8;font-size:10px;color:#6e7e91;line-height:1.6;border-top:1px solid #e4e9ef}
     @media(max-width:980px){.hero-grid{grid-template-columns:1fr .75fr;gap:18px}.hero h1{font-size:clamp(45px,6vw,68px)}.float-card.one{right:-6px}.float-card.two{left:-7px}.achievements{grid-template-columns:repeat(3,1fr)}.achievement{padding:24px}.achievement h3{font-size:16px}} 
     @media(max-width:770px){.shell{width:min(100% - 36px,580px)}.header-inner{height:77px}.top-cta{font-size:11px;padding:10px 15px}.hero{padding:140px 0 70px;min-height:auto}.hero-grid{grid-template-columns:1fr;gap:22px}.hero-panel{min-height:280px}.orbit{width:255px;height:255px}.orbit.small{width:195px;height:195px}.profile-emblem{width:160px;height:177px}.emblem-letters{font-size:60px}.emblem-caption{font-size:7px}.float-card{max-width:147px;padding:11px}.float-card.one{right:0;top:0}.float-card.two{left:0;bottom:0}.hero-lead{font-size:18px}.hero-actions{margin-top:30px}.action{width:100%;white-space:normal;text-align:center}.strip-inner{grid-template-columns:1fr}.strip-item,.strip-item:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.strip-item:last-child{border-bottom:0}.section{padding:72px 0}.section-heading{align-items:start}.achievements{grid-template-columns:1fr}.achievement{min-height:auto;padding:27px}.achv-icon{margin-bottom:18px}.resources-wrap{padding:65px 0}.resources-grid{grid-template-columns:1fr}.resource-panel{min-height:250px}.closing-inner{flex-direction:column;align-items:start}.closing .action.primary{width:auto}.footer-inner{align-items:start;flex-direction:column}.item-grid{grid-template-columns:1fr}.modal-head{padding:22px 18px 18px}.modal-toolbar{padding:14px 18px}.modal-body{padding:15px}.modal-foot{padding:12px 18px}.search-wrap{width:100%}.overlay{padding:8px}.modal{border-radius:15px;max-height:94vh}.tabs{flex-wrap:wrap}} 
-  </style>
+  
+/* Executive Portfolio expansion */
+.hero-panel {min-height:440px}
+.profile-emblem#real-photo {width:288px;height:390px;overflow:hidden;background:#fff;padding:0;border:2px solid rgba(219,182,93,.65);border-radius:20px;box-shadow:0 32px 75px rgba(0,0,0,.34)}
+.profile-emblem#real-photo::before,.profile-emblem#real-photo::after{display:none}
+#real-photo img {width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.float-card.one{right:-10px;top:30px}.float-card.two{left:-14px;bottom:30px}
+.career-grid{display:grid;grid-template-columns:minmax(0,1.28fr) minmax(300px,.72fr);gap:24px}
+.career-main,.career-aside{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.career-heading{display:flex;align-items:center;gap:9px;color:#a17b29;font-size:10px;letter-spacing:.13em;font-weight:800;padding:26px 28px 12px}
+.small-bullet{width:7px;height:7px;background:var(--gold);border-radius:50%}
+.career-list{padding:0 27px 15px}
+.career-entry{display:flex;gap:19px;align-items:start;padding:15px 0;border-bottom:1px solid var(--line)}
+.career-entry:last-child{border-bottom:none}
+.career-no{font-size:12px;font-weight:800;background:#0c2141;color:#f2c867;border-radius:50%;width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center}
+.career-entry b{display:block;font-size:13px;line-height:1.5;color:var(--navy)}
+.career-entry div span{display:block;font-size:12px;color:#67788f;line-height:1.8;margin-top:2px}
+.previous-roles{background:#f5f7fa;border-top:1px solid var(--line);padding:19px 27px;font-size:11px;line-height:1.9;color:#657389}
+.previous-roles b{color:var(--navy)}
+.career-aside{height:fit-content;align-self:start}
+.career-aside-head{padding:18px 24px;background:#10274a;color:var(--gold);font-size:11px;font-weight:800;letter-spacing:.13em}
+.check-list{list-style:none;padding:11px 26px;margin:0}
+.check-list li{position:relative;padding:13px 3px 13px 21px;border-bottom:1px solid var(--line);font-size:12px;line-height:1.65;color:#33475e}
+.check-list li:before{content:"✓";color:#a57a24;position:absolute;left:0;top:13px;font-weight:900}
+.check-list li:last-child{border:0}
+.systems-box{border-top:1px solid var(--line);background:#fbfaf6;padding:24px 26px;display:flex;flex-direction:column;gap:10px}
+.systems-box span{font-size:10px;letter-spacing:.13em;color:#9a7526;font-weight:800}
+.systems-box strong{font-size:13px;letter-spacing:.005em;line-height:1.9}
+.systems-box i{display:inline-block;height:12px;width:1px;background:#dcb55c;margin:0 8px}
+.competencies{background:#0a1a33;color:#fff}
+.competencies h2{color:#fff}
+.expertise-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px;margin-top:34px}
+.expertise-card{background:#112644;border:1px solid #29415f;border-radius:12px;padding:24px 18px;min-height:144px;display:flex;flex-direction:column;justify-content:space-between;gap:22px}
+.expertise-card span{font-size:14px;font-weight:800;color:var(--gold)}
+.expertise-card b{font-size:13px;line-height:1.5;color:#fff}
+.cert-section{background:#f2f5f9}
+.cert-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.cert-card{background:#fff;border:1px solid #dfe5ec;border-radius:12px;min-height:174px;padding:23px 18px;display:flex;flex-direction:column;gap:15px}
+.cert-card span{color:#ab8229;letter-spacing:.11em;font-size:9px;font-weight:800}
+.cert-card b{font-size:12px;color:#0b2243;line-height:1.7}
+.cert-card small{margin-top:auto;font-size:10px;color:#73839a}
+.fine-note{margin-top:20px;color:#7a8797;font-size:11px;line-height:1.8}
+.partner-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.partner-card{background:#fff;border:1px solid #e0e6ed;border-radius:13px;min-height:175px;overflow:hidden}
+.partner-cat{background:#0b2243;color:var(--gold);font-size:10px;font-weight:800;letter-spacing:.09em;padding:15px 20px}
+.partner-names{padding:20px;font-size:13px;line-height:2;color:#32455f;font-weight:650}
+.campaigns{background:#f2f5f9}
+.campaign-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}
+.campaign-grid>div{background:#fff;border-radius:12px;border:1px solid #e0e6ef;padding:24px 20px;display:flex;flex-direction:column;gap:10px}
+.campaign-grid strong{font-size:31px;font-weight:800;color:#081f43;letter-spacing:-.05em}
+.campaign-grid span{font-size:11px;color:#63758f;line-height:1.5}
+.campaign-grid b{font-size:12px;color:#a27623;line-height:1.55}
+.quote-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:26px}
+.quote-grid blockquote{margin:0;background:#fff;border:1px solid var(--line);border-radius:13px;padding:25px 19px;min-height:210px;display:flex;flex-direction:column}
+.quote-grid blockquote>span{font-size:55px;font-family:Georgia,serif;color:#d6a735;line-height:.7}
+.quote-grid p{font-family:Georgia,serif;font-size:17px;font-weight:600;line-height:1.5;color:#102644;margin:19px 0}
+.quote-grid cite{font-size:11px;font-style:normal;font-weight:800;color:#5e7189;margin-top:auto}
+@media(max-width:980px){.career-grid{grid-template-columns:1fr 350px}.expertise-grid{grid-template-columns:repeat(2,1fr)}.cert-grid{grid-template-columns:repeat(3,1fr)}.partner-grid{grid-template-columns:repeat(2,1fr)}.quote-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:770px){.hero-panel{min-height:340px}.profile-emblem#real-photo{width:205px;height:275px}.float-card.one{right:-2px;top:8px}.float-card.two{left:0;bottom:6px}.career-grid{grid-template-columns:1fr}.expertise-grid{grid-template-columns:repeat(2,1fr);gap:9px}.expertise-card{min-height:132px;padding:17px 13px}.expertise-card b{font-size:11px}.cert-grid{grid-template-columns:repeat(2,1fr)}.cert-card{min-height:155px}.partner-grid{grid-template-columns:1fr}.campaign-grid{grid-template-columns:repeat(2,1fr)}.quote-grid{grid-template-columns:1fr}.quote-grid blockquote{min-height:160px}.career-list{padding:0 16px 15px}.career-heading{padding:23px 17px 13px}.previous-roles{padding:19px 17px}.partner-names{padding:17px}}
+</style>
 </head>
 <body>
   <header class="header">
@@ -47,30 +106,30 @@
         <div>
           <div class="eyebrow">STRATEGIC THINKING. PRACTICAL IMPACT.</div>
           <h1>Dr. Saied<br><span>El Saharty.</span></h1>
-          <div class="hero-lead">Business strategy that works. People solutions that scale. AI with purpose.</div>
-          <p class="hero-desc">HR &amp; Business Consultant, Senior HR Business Partner and Business Administration Instructor. Helping organizations move from ideas to execution through organizational development, workforce strategy and practical digital transformation.</p>
+          <div class="hero-lead">15+ years of HR leadership. Business solutions that work. AI with purpose.</div>
+          <p class="hero-desc">Strategic HR Director, Business Consultant and Business Administration Instructor with 15+ years of experience spanning Egypt and the GCC. Combining people strategy, organizational transformation and business-driven execution.</p>
           <div class="roles"><span class="role-pill">HR &amp; Business Consulting</span><span class="role-pill">AI-Enabled HR Transformation</span><span class="role-pill">Business Administration Instructor</span></div>
           <div class="hero-actions">
             <button type="button" class="action primary" data-open="webinars"><span class="action-icon">▷</span> Winners Webinars <span aria-hidden="true">↗</span></button>
             <button type="button" class="action secondary" data-open="tools"><span class="action-icon">◈</span> AI Assistant Tools &amp; Materials <span aria-hidden="true">↗</span></button>
           </div>
         </div>
-        <div class="hero-panel" aria-label="Consulting and transformation illustration">
+        <div class="hero-panel" aria-label="Professional portrait of Dr. Saied El Saharty">
           <div class="orbit"></div><div class="orbit small"></div>
-          <div class="profile-emblem"><div class="emblem-letters">SE</div><div class="emblem-caption">EXECUTION BY DESIGN</div></div>
+          <div class="profile-emblem" id="real-photo"><img src="./dr-saied-portrait.webp" alt="Dr. Saied El Saharty in a dark professional blazer, from his executive portfolio" width="220" height="297" decoding="async" fetchpriority="high"></div>
           <div class="float-card one"><b><span class="float-dot"></span>Strategy to Execution</b><span>Evidence-led business &amp; HR solutions</span></div>
           <div class="float-card two"><b><span class="float-dot"></span>People × Technology</b><span>Real-world learning and digital tools</span></div>
         </div>
       </div>
     </section>
     <div class="strip">
-      <div class="shell strip-inner">
-        <div class="strip-item"><div class="strip-icon" aria-hidden="true">◇</div><div><b>14+ Years of Professional Experience</b><span>HR management, business partnership and consulting</span></div></div>
-        <div class="strip-item"><div class="strip-icon" aria-hidden="true">◎</div><div><b>Organizational Transformation</b><span>Strategy, OD, HR systems and business performance</span></div></div>
-        <div class="strip-item"><div class="strip-icon" aria-hidden="true">↗</div><div><b>Applied AI &amp; Professional Learning</b><span>Practical resources designed for the workplace</span></div></div>
-      </div>
-    </div>
-    <section class="section" id="achievements">
+  <div class="shell strip-inner">
+    <div class="strip-item"><div class="strip-icon">✦</div><div><b>15+ Years of Experience</b><span>Strategic HR leadership, consulting and business development</span></div></div>
+    <div class="strip-item"><div class="strip-icon">◎</div><div><b>7,000+ Professionals Trained</b><span>Learning and capability development in Egypt and the GCC</span></div></div>
+    <div class="strip-item"><div class="strip-icon">↗</div><div><b>6,800+ Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
+  </div>
+</div>
+<section class="section" id="achievements">
       <div class="shell">
         <div class="section-heading">
           <div><div class="section-kicker">PROFILE HIGHLIGHTS</div><h2>Experience built on execution.</h2><p class="section-intro">A combination of strategic HR leadership, applied business consulting and hands-on capability development — with technology serving measurable business outcomes.</p></div>
@@ -82,7 +141,112 @@
         </div>
       </div>
     </section>
-    <section class="resources-wrap" id="resources">
+    
+  <section class="section profile-deep" id="career">
+    <div class="shell">
+      <div class="section-heading"><div><div class="section-kicker">EXECUTIVE PROFILE</div><h2>Leadership across industries.</h2><p class="section-intro">An executive career spanning HR business partnership, enterprise restructuring, consulting, training and business development.</p></div></div>
+      <div class="career-grid">
+        <div class="career-main">
+          <div class="career-heading"><span class="small-bullet"></span><span>SELECTED LEADERSHIP & PROFESSIONAL ROLES</span></div>
+          <div class="career-list">
+            <div class="career-entry"><span class="career-no">01</span><div><b>Group Business Partner Director</b><span>Sinai Rose (Abnaa Sinai) Group</span></div></div>
+            <div class="career-entry"><span class="career-no">02</span><div><b>HR Consultant & Instructor</b><span>HR Winners — Business Consultation & Training Services</span></div></div>
+            <div class="career-entry"><span class="career-no">03</span><div><b>Business Administration Instructor</b><span>AIA College & LCIS College</span></div></div>
+            <div class="career-entry"><span class="career-no">04</span><div><b>Founder</b><span>Dr. Koliverastein for Business Solutions Services</span></div></div>
+            <div class="career-entry"><span class="career-no">05</span><div><b>HR Consultant</b><span>Smart Solutions (SSB)</span></div></div>
+            <div class="career-entry"><span class="career-no">06</span><div><b>HR Business Consultant</b><span>Cross-industry consulting engagements</span></div></div>
+          </div>
+          <div class="previous-roles"><b>Earlier professional experience:</b> Toucan Group · Ibn Khaldun School · Branding Agency · Sunset Boat (Sheraton).</div>
+        </div>
+        <div class="career-aside">
+          <div class="career-aside-head">SPECIALIZED FOCUS</div>
+          <ul class="check-list">
+            <li>HRIS implementation and transformation</li>
+            <li>Organizational restructuring and workforce planning</li>
+            <li>Strategic HR leadership and people strategy</li>
+            <li>Training and capability development</li>
+            <li>AI awareness and business applications</li>
+            <li>Business consulting and strategy execution</li>
+          </ul>
+          <div class="systems-box"><span>SYSTEMS EXPERIENCE</span><strong>Odoo <i></i> Oracle <i></i> SAP <i></i> Maestro</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section competencies" id="expertise">
+    <div class="shell">
+      <div class="section-kicker">CORE EXPERTISE</div><h2>Strategy meets delivery.</h2>
+      <div class="expertise-grid">
+        <div class="expertise-card"><span>01</span><b>Strategic HR Management</b></div>
+        <div class="expertise-card"><span>02</span><b>Talent Acquisition & Recruitment Outsourcing</b></div>
+        <div class="expertise-card"><span>03</span><b>Learning & Development</b></div>
+        <div class="expertise-card"><span>04</span><b>Organizational Development & Restructuring</b></div>
+        <div class="expertise-card"><span>05</span><b>HR Operations, Payroll & Personnel</b></div>
+        <div class="expertise-card"><span>06</span><b>HRIS Implementation</b></div>
+        <div class="expertise-card"><span>07</span><b>Business Consulting & Strategic Planning</b></div>
+        <div class="expertise-card"><span>08</span><b>Recruitment Marketing & Employer Branding</b></div>
+      </div>
+    </div>
+  </section>
+  <section class="section cert-section" id="certifications">
+    <div class="shell">
+      <div class="section-heading"><div><div class="section-kicker">PROFESSIONAL CREDENTIALS</div><h2>Continuous professional development.</h2><p class="section-intro">Selected certifications, learning programs and applied technical credentials included in the executive portfolio.</p></div></div>
+      <div class="cert-grid">
+        <div class="cert-card"><span>HR CERTIFICATION</span><b>PHRi — Professional in Human Resources, International</b><small>HRCI</small></div>
+        <div class="cert-card"><span>HR CERTIFICATION</span><b>HRCI Human Resource Associate</b><small>HRCI</small></div>
+        <div class="cert-card"><span>HR DEVELOPMENT</span><b>Associate Certificate in Human Resource Management</b></div>
+        <div class="cert-card"><span>HR LEARNING</span><b>Foundations of SHRM Certification</b></div>
+        <div class="cert-card"><span>GOVERNANCE</span><b>Compliance and Risk Management</b></div>
+        <div class="cert-card"><span>GENERATIVE AI</span><b>Generative AI: Introduction and Applications</b><small>IBM / Coursera</small></div>
+        <div class="cert-card"><span>BUSINESS</span><b>Create a Business Plan</b></div>
+        <div class="cert-card"><span>FINANCE</span><b>Financial Performance</b></div>
+        <div class="cert-card"><span>ANALYTICS</span><b>Analyze Your Data</b></div>
+        <div class="cert-card"><span>DIGITAL MARKETING</span><b>Google Ads Apps Certification</b></div>
+      </div>
+      <p class="fine-note">Credential names are taken from the supplied portfolio. Individual courses are not presented as licenses or professional designations.</p>
+    </div>
+  </section>
+  <section class="section" id="partners">
+    <div class="shell">
+      <div class="section-heading"><div><div class="section-kicker">SELECTED ORGANIZATIONS & BRANDS</div><h2>Cross-industry exposure.</h2><p class="section-intro">The portfolio presents the following organizations across consulting, recruitment, training and business-support contexts. This is a selected partners-and-clients list, not a claim of direct employment at each organization.</p></div></div>
+      <div class="partner-grid">
+        <div class="partner-card"><div class="partner-cat">BANKING & FINANCE</div><div class="partner-names">National Bank of Egypt</div></div>
+        <div class="partner-card"><div class="partner-cat">FMCG & FOOD</div><div class="partner-names">Kellogg's · Temmy's · Bayara · Rich Bake · Mass Food · Friday Ice Cream · Sinai Rose</div></div>
+        <div class="partner-card"><div class="partner-cat">INDUSTRIAL & MANUFACTURING</div><div class="partner-names">Arafa Group · Unionaire · Egyplast · Egytrafo · eFile</div></div>
+        <div class="partner-card"><div class="partner-cat">REAL ESTATE & CONSTRUCTION</div><div class="partner-names">ARX Development · Future Expo Real Estate · Composition Architecture</div></div>
+        <div class="partner-card"><div class="partner-cat">EDUCATION & SERVICES</div><div class="partner-names">Winners · ALO Travel · Organi Group</div></div>
+        <div class="partner-card"><div class="partner-cat">HOSPITALITY, RETAIL & LIFESTYLE</div><div class="partner-names">Gourmet · Royal Lounge · Snips · Rose Garden</div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section campaigns" id="campaigns">
+    <div class="shell">
+      <div class="section-heading"><div><div class="section-kicker">SELECTED MARKETING RESULTS</div><h2>Execution measured in outcomes.</h2><p class="section-intro">Seven historical messaging-campaign snapshots shown in the supplied executive portfolio. Each pair below refers to its own campaign.</p></div></div>
+      <div class="campaign-grid">
+        <div><strong>238</strong><span>Messaging conversations</span><b>EGP 2.38 per conversation</b></div>
+        <div><strong>109</strong><span>Messaging conversations</span><b>EGP 4.69 per conversation</b></div>
+        <div><strong>554</strong><span>Messaging conversations</span><b>EGP 5.61 per conversation</b></div>
+        <div><strong>332</strong><span>Messaging conversations</span><b>EGP 3.35 per conversation</b></div>
+        <div><strong>307</strong><span>Messaging conversations</span><b>EGP 0.90 per conversation</b></div>
+        <div><strong>300</strong><span>Messaging conversations</span><b>EGP 7.01 per conversation</b></div>
+        <div><strong>233</strong><span>Messaging conversations</span><b>EGP 1.94 per conversation</b></div>
+      </div>
+      <p class="fine-note">Source: messaging campaigns overview in the supplied portfolio. These are historic results, not typical or guaranteed future outcomes.</p>
+    </div>
+  </section>
+  <section class="section testimonials" id="recognition">
+    <div class="shell">
+      <div class="section-kicker">PUBLIC RECOGNITION</div><h2>Trust built through execution.</h2>
+      <div class="quote-grid">
+        <blockquote><span>“</span><p>Excellent service and professional experts.</p><cite>MaRim GaBer</cite></blockquote>
+        <blockquote><span>“</span><p>Best service and highly respectful treatment.</p><cite>Nadoosh</cite></blockquote>
+        <blockquote><span>“</span><p>Outstanding after-sales service and attention.</p><cite>Mohammed Ali</cite></blockquote>
+        <blockquote><span>“</span><p>Highly appreciated and strongly recommended.</p><cite>Mohamed A. Elereey</cite></blockquote>
+      </div>
+      <p class="fine-note">Testimonials transcribed from the supplied portfolio slide; original public review URLs were not supplied.</p>
+    </div>
+  </section>
+<section class="resources-wrap" id="resources">
       <div class="shell">
         <div class="section-kicker">PRACTICAL KNOWLEDGE HUB</div><h2 style="font-size:clamp(30px,3.6vw,45px);letter-spacing:-.05em;color:#08152c;margin:12px 0">Explore. Learn. Apply.</h2><p class="section-intro">Two curated collections for HR and business professionals. Open either collection to access the webinars, interactive tools and working materials.</p>
         <div class="resources-grid">
@@ -128,7 +292,7 @@
       {title:"Functional & Strategic Auditing",label:"HR Auditing",url:"https://www.facebook.com/reel/1062612293266624",note:"Winners session"}
     ];
     var RESOURCES=[
-      {title:"CV Analyzer",label:"AI System",group:"systems",note:"Original shared application link needs mapping and verification.",url:null,status:"Link under review"},
+      {title:"CV Analyzer",label:"AI System",group:"systems",note:"CV Analyzer web application link confirmed by the owner.",url:"https://script.google.com/macros/s/AKfycbyWeqCbTL0M0emixAhxL40howEVTN-7tnSFQfEW7yV-JM12secssCLk9tvIdyF3eu2iIQ/exec",status:"Open app"},
       {title:"Personal Branding Assessment",label:"Assessment",group:"systems",note:"Self-assessment form.",url:"https://forms.gle/n9XyrLRRmigGHX5ZA",status:"External form"},
       {title:"Company X-Ray",label:"AI System",group:"systems",note:"Company and business intelligence. Availability may depend on deployment status.",url:"https://script.google.com/macros/s/AKfycby1FrAWpuOqTw53nO4Ebn-zsKOfinV9-jc-EE1GcAScjy232mmr8qCVS0pgCB3qkh13/exec",status:"Deployment check"},
       {title:"Career Compass — بوصلة مسارك المهني",label:"Career Assessment",group:"systems",note:"Career direction and capability assessment.",url:"https://forms.gle/Z7KMvBmyXfAdQJgb7",status:"External form"},
