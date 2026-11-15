@@ -44,3 +44,12 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Homepage original studio photo uploaded as `hero-saied.webp`; displayed next to hero copy with no frame, card, or border. Dark photo background blends into the site's navy hero.
 - Seven user-supplied workshop/training photos uploaded as `training-gallery.webp` (optimized contact-sheet/sprite) and displayed in an accessible seven-card **Training & Workshops in Action** section.
 - Facebook and materials collections, links and removed HR Maturity Assessment remain unchanged.
+
+## Certification and interaction refresh — November 2026
+- User-supplied additional credentials: **SAP Professional Consultant**, **SAP Designing Solution**, **SHRM Advanced Knowledge and Competencies** and **HR Digitally — AIHR**.
+- Existing **Generative AI: Introduction and Applications — IBM / Coursera** retained and prominently given its issuer identity; not duplicated.
+- Total displayed training/certification cards: 14. All show issuer identity; 12 retrieve provider site icons, 2 have explicit typographic fallback marks where their issuing logo was not safely established. Providers must not be misrepresented as certifying a different course.
+- Corrected Winners career entry to **HR & Business Consultant**.
+- Added interactive certificate filters with live count (All, SAP & Enterprise, HR & People, AI & Digital, Business & Analytics).
+- Added lightweight JavaScript: intersection-observer reveals, metric count-up, scroll progress, back-to-top, reduced-motion honoring and no dependency on heavy external JS frameworks.
+- The exact certificate issuers, awarded dates and further missing credentials require the user's documentary confirmation. Do not claim SHRM-CP, SHRM-SCP or other professional designations based on unrelated course names.
