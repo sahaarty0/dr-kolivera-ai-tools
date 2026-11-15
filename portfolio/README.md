@@ -53,3 +53,8 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Added interactive certificate filters with live count (All, SAP & Enterprise, HR & People, AI & Digital, Business & Analytics).
 - Added lightweight JavaScript: intersection-observer reveals, metric count-up, scroll progress, back-to-top, reduced-motion honoring and no dependency on heavy external JS frameworks.
 - The exact certificate issuers, awarded dates and further missing credentials require the user's documentary confirmation. Do not claim SHRM-CP, SHRM-SCP or other professional designations based on unrelated course names.
+
+## Academic and course attribution update — November 2026
+- Academic qualifications added on owner instruction, in a section distinct from courses and professional certification cards: **DBA (Doctor of Business Administration) — Faculty of Commerce, Benha University**; **MBA — Benha University**; **MBA — CMU-CIC**. CMU-CIC is deliberately kept in the user's own literal wording rather than expanded to an unconfirmed institution name. Degree award dates and certificate scans were not supplied.
+- Corrected the displayed issuer of **Create a Business Plan** from LinkedIn Learning to **Harvard University**, according to the user's explicit correction. The portfolio slide previously showed a different learning provider; this attribution has not independently been checked against an award certificate, so do not treat it as independently verified.
+- All 14 prior credential/course entries, 9 webinars, 14 resource items and gallery images remain as before.
