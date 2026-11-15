@@ -573,6 +573,128 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
 @media(max-width:600px){.meet-intro{align-items:flex-start;gap:12px}.meet-counter{width:75px;min-height:82px}.meet-counter strong{font-size:31px}.meet-counter span{font-size:8px;text-align:center}.meet-feature-content h3{font-size:25px}.meet-watch{min-width:0;width:100%;font-size:12px}.meet-feature-visual img{height:235px}.reel-library-head{margin-top:30px}.personal-reels-grid{gap:11px}.reel-cover{padding:12px;aspect-ratio:4/5}.reel-cover-center strong{font-size:15px}.reel-play{width:43px;height:43px;font-size:16px}.reel-cover-top,.reel-cover-bottom{font-size:7px}.reel-copy{padding:13px}.reel-copy h3{font-size:11px}.reel-copy .reel-subline{font-size:9px}.reel-filter{padding:9px 12px;font-size:10px}.socials-grid{gap:9px}.social-network{padding:12px 10px;gap:9px}.social-network-logo{width:32px;height:32px;flex-basis:32px;font-size:12px}.social-network-info strong{font-size:11px}.social-network-info small{font-size:9px}}
 @media(max-width:390px){.personal-reels-grid,.socials-grid{grid-template-columns:1fr}.reel-cover{aspect-ratio:16/9}.meet-feature-visual img{height:210px}}
 @media(prefers-reduced-motion:reduce){.personal-reel-card,.reel-play,.reel-filter,.social-network,.meet-watch{transition:none!important}}
+
+/* Mobile-first information architecture: navigation, visitor paths, engagement and FAQ */
+html{scroll-padding-top:96px}
+section[id],.strip[id]{scroll-margin-top:100px}
+.mobile-nav-toggle,.mobile-nav,.mobile-quick-actions{display:none}
+.mobile-nav[hidden]{display:none!important}
+.header .header-utilities{min-width:0}
+.visitor-path-section{background:linear-gradient(155deg,#f0f4f9,#fff);padding-top:62px;padding-bottom:74px}
+.visitor-topline{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.visitor-indicator{font-size:10px;font-weight:900;letter-spacing:.12em;color:#96753c}
+.visitor-path-section h2{font-size:clamp(27px,4vw,44px);margin:15px 0;color:#0c2a4e}
+.visitor-path-section .section-intro{max-width:740px}
+.visitor-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px;margin-top:26px}
+.visitor-card{min-width:0;display:flex;flex-direction:column;align-items:flex-start;padding:28px 31px;border-radius:19px;color:#fff;min-height:235px;position:relative;overflow:hidden;isolation:isolate;background:radial-gradient(circle at 95% 5%,rgba(218,182,100,.22),transparent 45%),linear-gradient(130deg,#0a2343,#16385d);transition:transform .24s,box-shadow .24s}
+.visitor-card:after{content:"";position:absolute;right:-60px;bottom:-160px;width:310px;height:310px;border:1px solid rgba(255,255,255,.1);border-radius:50%;box-shadow:0 0 0 45px rgba(255,255,255,.025);pointer-events:none}
+.visitor-learning{background:radial-gradient(circle at 95% 10%,rgba(224,199,133,.18),transparent 45%),linear-gradient(135deg,#17314e,#324e64)}
+.visitor-card:hover{transform:translateY(-4px);box-shadow:0 16px 33px rgba(15,38,68,.19)}
+.visitor-card-tag{color:#dfbb70;font-size:9px;font-weight:900;letter-spacing:.14em}
+.visitor-card-icon{font-size:30px;color:#e6c477;position:absolute;right:30px;top:23px}
+.visitor-card>strong{font-size:clamp(18px,2vw,25px);line-height:1.3;max-width:320px;margin-top:30px}
+.visitor-card p{font-size:12px;line-height:1.7;color:#c8d5e3;max-width:375px;margin:13px 0 19px}
+.visitor-card-cta{display:flex;align-items:center;gap:7px;color:#eac879;font-size:11px;font-weight:900;margin-top:auto}
+.engagement-section{background:#fff}
+.engagement-section .section-heading{margin-bottom:29px}
+.engagement-section h2{font-size:clamp(29px,3.8vw,43px);line-height:1.2;color:#0b2949}
+.engagement-steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.engagement-step{border-radius:16px;background:#f4f7fa;border:1px solid #e4eaf1;padding:23px 21px;position:relative;min-width:0}
+.engagement-step:before{position:absolute;content:"";left:0;top:0;bottom:auto;height:3px;width:85px;background:#c8a15a;border-radius:2px}
+.engagement-count{font-size:13px;font-weight:950;color:#a38242;letter-spacing:.08em}
+.engagement-glyph{display:grid;place-items:center;width:51px;height:51px;background:#122e4e;border-radius:12px;color:#e7bc64;font-size:25px;margin:21px 0 18px}
+.engagement-step h3{font-size:17px;color:#102b48;margin:0 0 9px}
+.engagement-step p{font-size:11px;color:#55677c;line-height:1.75;margin:0}
+.engagement-next{display:flex;align-items:center;justify-content:space-between;gap:15px;border-radius:13px;margin-top:20px;padding:18px 22px;background:#142f51;color:#dbe7f4;font-size:11px;line-height:1.6}
+.engagement-next>a{background:#e0b965;color:#0b2643;font-weight:900;font-size:12px;padding:13px 17px;border-radius:9px;white-space:nowrap}
+.faq-section{background:linear-gradient(160deg,#f4f7fb,#fff)}
+.faq-section h2{font-size:clamp(28px,4vw,43px);color:#0b2949;margin:13px 0}
+.faq-section .section-intro{max-width:740px}
+.faq-questions{max-width:950px;display:grid;gap:11px;margin-top:30px}
+.faq-item{border:1px solid #dce5ef;background:#fff;border-radius:12px;box-shadow:0 8px 21px rgba(13,37,68,.035);overflow:hidden}
+.faq-item summary{display:flex;align-items:center;justify-content:space-between;gap:13px;cursor:pointer;list-style:none;padding:20px 23px;font-size:14px;font-weight:850;color:#102d4f}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary .faq-plus{flex:0 0 28px;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#ecf1f6;color:#a28042;font-size:22px;font-weight:400;transition:transform .2s}
+.faq-item[open] summary .faq-plus{transform:rotate(45deg)}
+.faq-answer{padding:0 23px 20px;max-width:820px}
+.faq-answer p{color:#52677c;font-size:12px;line-height:1.9;margin:0}
+@media(max-width:1070px){
+ .header-nav{display:none!important}
+ .mobile-nav-toggle{display:flex;flex:0 0 44px;width:44px;height:44px;flex-direction:column;justify-content:center;align-items:center;gap:5px;border:1px solid rgba(235,241,249,.29);border-radius:11px;background:rgba(255,255,255,.04);padding:9px;order:3}
+ .menu-icon-line{width:21px;height:2px;background:#f6d78a;border-radius:5px;transition:transform .2s,opacity .2s}
+ .mobile-nav-toggle.is-open .menu-icon-line:nth-child(1){transform:translateY(7px) rotate(45deg)}
+ .mobile-nav-toggle.is-open .menu-icon-line:nth-child(2){opacity:0}
+ .mobile-nav-toggle.is-open .menu-icon-line:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+ .mobile-nav{display:block;position:absolute;z-index:80;top:100%;inset-inline:12px;width:auto;max-height:calc(100dvh - 95px);overflow-y:auto;overscroll-behavior:contain;color:#e8f2fb;background:#071a33;border:1px solid rgba(218,183,106,.3);border-radius:0 0 17px 17px;box-shadow:0 24px 55px rgba(3,12,28,.38);padding:17px 15px 16px;scrollbar-width:thin}
+ .mobile-nav-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:9px;font-weight:850;letter-spacing:.12em;color:#d9b86f;padding:5px 8px 12px}
+ .mobile-nav-heading>span:last-child{font-size:8px;color:#7791af}
+ .mobile-nav-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ .mobile-nav-link{min-width:0;display:flex;align-items:center;justify-content:space-between;gap:9px;padding:13px 12px;border:1px solid rgba(207,225,241,.10);border-radius:10px;background:rgba(255,255,255,.04);min-height:51px;font-size:12px;font-weight:800;color:#ecf4fc;line-height:1.5}
+ .mobile-nav-link:hover,.mobile-nav-link:focus-visible{background:rgba(236,194,115,.13);border-color:rgba(236,194,115,.38)}
+ .mobile-nav-link.mobile-highlight{background:rgba(235,196,111,.15);border-color:rgba(235,196,111,.43)}
+ .mobile-nav-link>span:first-child{min-width:0}
+ .mobile-menu-arrow{font-size:13px;color:#d4ad65;flex-shrink:0}
+ .mobile-nav-portfolio{display:block;text-align:center;background:#e3be6e;color:#10233f;font-size:12px;font-weight:900;border-radius:10px;padding:15px;margin-top:11px}
+}
+@media(max-width:850px){.engagement-steps{grid-template-columns:repeat(2,minmax(0,1fr))}.engagement-step{padding:22px}}
+@media(max-width:770px){
+ .header{position:fixed!important;top:0;left:0;right:0;z-index:95}
+ .header-inner{height:73px!important;gap:9px}
+ .header-utilities{margin-inline-start:auto;gap:7px!important}
+ .header .header-utilities>.top-cta{display:none!important}
+ .site-language-button{min-height:44px;min-width:68px;padding:9px 11px}
+ .hero{padding-top:125px!important}
+ .visitor-path-section{padding-top:50px;padding-bottom:56px}
+ .visitor-cards{gap:11px}
+ .visitor-card{min-height:240px;padding:23px 20px}
+ .mobile-quick-actions{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:85;gap:9px;align-items:center;background:rgba(7,21,42,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-top:1px solid rgba(235,195,108,.24);padding:9px 14px calc(9px + env(safe-area-inset-bottom,0px));box-shadow:0 -12px 30px rgba(5,17,34,.23)}
+ .mobile-quick-actions>a{height:46px;min-width:0;flex:1;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center;font-size:12px;font-weight:900;border-radius:10px}
+ .mobile-quick-solution{background:#16365a;color:#f6e5c2;border:1px solid rgba(245,209,140,.35)}
+ .mobile-quick-whatsapp{background:#e3bc6b;color:#102944}
+ body{padding-bottom:calc(65px + env(safe-area-inset-bottom,0px))}
+ body.modal-open .mobile-quick-actions{display:none!important}
+ .footer{padding-bottom:8px}
+ .faq-item summary{padding:18px 17px;font-size:12px}
+ .faq-answer{padding:0 17px 19px}
+}
+@media(max-width:620px){
+ .shell{width:calc(100% - 30px)!important}
+ .visitor-cards{grid-template-columns:1fr}
+ .visitor-card{min-height:205px;padding:22px}
+ .visitor-card>strong{margin-top:22px;font-size:21px}
+ .visitor-card p{margin:10px 0 15px;font-size:12px}
+ .engagement-steps{grid-template-columns:1fr 1fr;gap:10px}
+ .engagement-step{padding:17px}
+ .engagement-step h3{font-size:15px}
+ .engagement-step p{font-size:11px}
+ .engagement-glyph{margin:14px 0 12px;width:43px;height:43px}
+ .engagement-next{flex-direction:column;align-items:stretch;padding:18px}
+ .engagement-next a{text-align:center}
+ .header .brand{gap:9px}
+ .header .brand-mark{flex:0 0 32px;width:32px;height:32px;font-size:12px}
+ .header .brand-name{font-size:9px!important;letter-spacing:.07em!important}
+ .header .brand-sub{font-size:10px!important;letter-spacing:0!important}
+ .header .header-utilities .site-language-button{min-width:61px;font-size:11px}
+ .hero-desc{line-height:1.75}
+ .section{overflow-wrap:break-word}
+ .hero-actions .action{min-height:46px}
+}
+@media(max-width:440px){
+ .mobile-nav-links{grid-template-columns:1fr 1fr}
+ .mobile-nav-link{font-size:10px;padding:11px 9px;min-height:46px}
+ .mobile-nav{inset-inline:8px;padding:13px 11px}
+ .mobile-quick-actions{gap:7px;padding-inline:10px}
+ .mobile-quick-actions>a{font-size:11px}
+ .engagement-steps{grid-template-columns:1fr}
+ .engagement-step{display:grid;grid-template-columns:40px 1fr;column-gap:12px;align-items:start}
+ .engagement-count{grid-column:1}
+ .engagement-glyph{grid-column:1;grid-row:2 / span 2;margin:7px 0}
+ .engagement-step h3{grid-column:2;grid-row:1 / span 2;margin-top:4px}
+ .engagement-step p{grid-column:2;grid-row:3}
+ .visitor-indicator{font-size:8px;letter-spacing:.06em}
+}
+@media(max-width:350px){.header .brand-mark{display:none}.header .brand-name{font-size:8px!important}.header .header-utilities .site-language-button{min-width:57px;padding-inline:7px}}
+@media(prefers-reduced-motion:reduce){.visitor-card,.menu-icon-line,.faq-plus{transition:none!important}}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
@@ -583,8 +705,27 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
       </a>
       <nav class="header-nav" aria-label="Main website navigation">
   <a href="https://drive.google.com/file/d/1dJf9bpIdNM4wQhdOZRT4fdQHXvyGUieR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View full executive portfolio PDF on Google Drive">Portfolio PDF</a><a href="#meet-koliverastein">Videos</a><a href="#cases">Cases</a><a href="#business-solutions">Solutions</a><a href="#academic-qualifications">Degrees</a><a href="#career">Experience</a><a href="#certifications">Credentials</a><a href="#partners">Clients</a><a href="#resources">Resources</a>
-</nav><div class="header-utilities"><button type="button" id="language-toggle" class="site-language-button" aria-label="عرض الموقع باللغة العربية" aria-pressed="false">العربية</button><button type="button" class="language-toggle" id="language-toggle" aria-label="عرض الموقع باللغة العربية" aria-pressed="false">العربية</button><a class="top-cta" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Contact my team on WhatsApp only"><span class="header-wa-long">WhatsApp the Team ↗</span><span class="header-wa-short">WhatsApp ↗</span></a></div>
+</nav><div class="header-utilities"><button type="button" class="mobile-nav-toggle" id="mobile-nav-toggle" aria-controls="mobile-nav" aria-expanded="false" aria-label="Open site menu">
+  <span class="menu-icon-line"></span><span class="menu-icon-line"></span><span class="menu-icon-line"></span>
+</button><button type="button" class="site-language-button" id="language-toggle" aria-label="عرض الموقع باللغة العربية" aria-pressed="false">العربية</button><a class="top-cta" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Contact my team on WhatsApp only"><span class="header-wa-long">WhatsApp the Team ↗</span><span class="header-wa-short">WhatsApp ↗</span></a></div>
     </div>
+  <nav id="mobile-nav" class="mobile-nav" aria-label="Mobile site navigation" aria-hidden="true" hidden>
+  <div class="mobile-nav-heading"><span class="case-en" lang="en" data-i18n-skip>EXPLORE THE WEBSITE</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>تصفح الموقع</span><span>DR. KOLIVERASTEIN</span></div>
+  <div class="mobile-nav-links"><a href="#start-here" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Start here</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ابدأ من هنا</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#business-solutions" class="mobile-nav-link mobile-highlight"><span class="case-en" lang="en" data-i18n-skip>Business Solutions</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>حلول الأعمال</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#meet-koliverastein" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Meet Dr. Koliverastein</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>تعرف على د. كوليفراشتاين</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#cases" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Business Cases</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الحالات العملية</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#how-i-work" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>How I Work</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>طريقة العمل</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#academic-qualifications" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Qualifications</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>المؤهلات</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#career" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Experience</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الخبرات</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#certifications" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Credentials</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الشهادات</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#training-gallery" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Training & Workshops</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>التدريب والورش</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#resources" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Webinars & Tools</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الويبنارات والأدوات</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#digital-presence" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Social Media</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الحسابات المهنية</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#faq" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>FAQ</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الأسئلة الشائعة</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a>
+<a href="#contact" class="mobile-nav-link"><span class="case-en" lang="en" data-i18n-skip>Team Contact</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>تواصل مع الفريق</span><span aria-hidden="true" class="mobile-menu-arrow">↗</span></a></div>
+  <a class="mobile-nav-portfolio" href="https://drive.google.com/file/d/1dJf9bpIdNM4wQhdOZRT4fdQHXvyGUieR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer"><span class="case-en" lang="en" data-i18n-skip>Executive Portfolio PDF ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>البورتفوليو الكامل PDF ↗</span></a>
+</nav>
   </header>
   <main>
     <section class="hero" id="top">
@@ -614,6 +755,33 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
     <div class="strip-item"><div class="strip-icon">↗</div><div><b><span class="counter" data-counter="6800" data-suffix="+">6,800+</span> Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
   </div>
 </div>
+<section class="section visitor-path-section" id="start-here">
+ <div class="shell">
+   <div class="visitor-topline"><span class="section-kicker">START HERE</span><span class="visitor-indicator">YOUR GOAL / YOUR PATH</span></div>
+   <h2 class="case-en" lang="en" data-i18n-skip>What brings you here?</h2>
+   <h2 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>تحب تبدأ منين؟</h2>
+   <p class="section-intro case-en" lang="en" data-i18n-skip>Different goals need different conversations. Choose your path and go straight to what matters.</p>
+   <p class="section-intro case-ar" lang="ar" dir="rtl" data-i18n-skip>كل زائر له هدف مختلف. اختار اللي يناسبك وهتوصل للمحتوى اللي يهمك مباشرة.</p>
+   <div class="visitor-cards">
+     <a href="#business-solutions" class="visitor-card visitor-business">
+       <span class="visitor-card-tag">01 / BUSINESS</span><span class="visitor-card-icon" aria-hidden="true">↗</span>
+       <strong class="case-en" lang="en" data-i18n-skip>I lead a business or a team</strong>
+       <strong class="case-ar" lang="ar" dir="rtl" data-i18n-skip>أنا صاحب شركة أو مسؤول عن فريق</strong>
+       <p class="case-en" lang="en" data-i18n-skip>Find practical ways to address growth, operations, HR and digital challenges.</p>
+       <p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شوف حلولًا عملية للنمو والتشغيل والموارد البشرية والتحول الرقمي.</p>
+       <span class="visitor-card-cta"><span class="case-en" lang="en" data-i18n-skip>Explore business solutions</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>استكشف حلول الأعمال</span> ↗</span>
+     </a>
+     <a href="#resources" class="visitor-card visitor-learning">
+       <span class="visitor-card-tag">02 / PROFESSIONAL GROWTH</span><span class="visitor-card-icon" aria-hidden="true">▤</span>
+       <strong class="case-en" lang="en" data-i18n-skip>I'm developing my professional skills</strong>
+       <strong class="case-ar" lang="ar" dir="rtl" data-i18n-skip>أنا عايز أطور مهاراتي المهنية</strong>
+       <p class="case-en" lang="en" data-i18n-skip>Explore webinars, real workshop moments, career tools and AI resources.</p>
+       <p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>استكشف الويبنارات وورش العمل والأدوات المهنية وموارد الذكاء الاصطناعي.</p>
+       <span class="visitor-card-cta"><span class="case-en" lang="en" data-i18n-skip>Explore learning resources</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>استكشف الموارد التعليمية</span> ↗</span>
+     </a>
+   </div>
+ </div>
+</section>
 <section class="section meet-koliverastein" id="meet-koliverastein">
  <div class="shell">
   <div class="section-kicker">BEYOND THE CV · REAL VOICE</div>
@@ -863,6 +1031,37 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
     <p class="solution-privacy case-en" lang="en" data-i18n-skip>No form submission or website storage. WhatsApp opens with your selected topic and note; you decide whether to send.</p>
     <p class="solution-privacy case-ar" lang="ar" dir="rtl" data-i18n-skip>الموقع لا يخزن رسالتك. واتساب بيفتح بموضوعك وتفاصيلك، وإنت اللي بتقرر تبعت.</p>
    </div>
+  </div>
+ </div>
+</section>
+<section class="section engagement-section" id="how-i-work">
+ <div class="shell">
+  <div class="section-heading"><div><div class="section-kicker">HOW I WORK</div>
+    <h2 class="case-en" lang="en" data-i18n-skip>From first conversation to practical action.</h2>
+    <h2 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>من أول محادثة لأول خطوة تنفيذ.</h2>
+    <p class="section-intro case-en" lang="en" data-i18n-skip>No generic prescriptions. Every engagement starts by understanding the real situation and agreeing on a clear scope.</p>
+    <p class="section-intro case-ar" lang="ar" dir="rtl" data-i18n-skip>مفيش وصفة واحدة تنفع لكل الشركات. بنبدأ بفهم الواقع ونحدد نطاق التعاون بشكل واضح.</p>
+  </div></div>
+  <div class="engagement-steps">
+   <article class="engagement-step"><span class="engagement-count">01</span><span class="engagement-glyph" aria-hidden="true">◎</span>
+    <h3 class="case-en" lang="en" data-i18n-skip>Discover</h3><h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>نفهم الطلب</h3>
+    <p class="case-en" lang="en" data-i18n-skip>We listen to the business challenge, context and decision priorities.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>بنسمع المشكلة ونفهم طبيعة الشركة والقرارات المطلوبة.</p>
+   </article>
+   <article class="engagement-step"><span class="engagement-count">02</span><span class="engagement-glyph" aria-hidden="true">⌕</span>
+    <h3 class="case-en" lang="en" data-i18n-skip>Diagnose</h3><h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>نشخص السبب</h3>
+    <p class="case-en" lang="en" data-i18n-skip>Review relevant evidence and separate symptoms from root causes.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>نراجع الأدلة ونفرق بين الأعراض والأسباب الجذرية.</p>
+   </article>
+   <article class="engagement-step"><span class="engagement-count">03</span><span class="engagement-glyph" aria-hidden="true">▤</span>
+    <h3 class="case-en" lang="en" data-i18n-skip>Propose</h3><h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>نتفق على الحل</h3>
+    <p class="case-en" lang="en" data-i18n-skip>Agree priorities, project scope, responsibilities and success measures.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>نحدد الأولويات ونطاق المشروع والمسؤوليات ومؤشرات النجاح.</p>
+   </article>
+   <article class="engagement-step"><span class="engagement-count">04</span><span class="engagement-glyph" aria-hidden="true">↗</span>
+    <h3 class="case-en" lang="en" data-i18n-skip>Deliver & Review</h3><h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ننّفذ ونتابع</h3>
+    <p class="case-en" lang="en" data-i18n-skip>Execute agreed steps, measure progress and adjust based on findings.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ننّفذ الخطوات المتفق عليها ونراجع النتائج ونعدل المسار حسب البيانات.</p>
+   </article>
+  </div>
+  <div class="engagement-next"><span class="case-en" lang="en" data-i18n-skip>Every project's duration, fees and deliverables are agreed before work starts.</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>المدة والتكلفة والمخرجات بيتم الاتفاق عليها قبل بداية أي مشروع.</span>
+    <a href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer"><span class="case-en" lang="en" data-i18n-skip>Contact my team ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>تواصل مع التيم ↗</span></a>
   </div>
  </div>
 </section>
@@ -1308,6 +1507,37 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
    <p class="socials-footnote case-ar" lang="ar" dir="rtl" data-i18n-skip>الحسابات مستخرجة من الـLinktree والريلز اللي بعتّها. للاستشارات والتعاون تواصل مع التيم من خلال واتساب أو البريد الموجودين أسفل الصفحة.</p>
  </div>
 </section>
+<section class="section faq-section" id="faq"><div class="shell">
+  <div class="section-kicker">COMMON QUESTIONS</div>
+  <h2 class="case-en" lang="en" data-i18n-skip>A few things worth knowing.</h2>
+  <h2 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>أسئلة ممكن تكون في بالك.</h2>
+  <p class="section-intro case-en" lang="en" data-i18n-skip>Useful details before you reach out to the team.</p>
+  <p class="section-intro case-ar" lang="ar" dir="rtl" data-i18n-skip>إجابات مختصرة تساعدك قبل ما تتواصل مع التيم.</p>
+  <div class="faq-questions"><details class="faq-item" open>
+    <summary><span class="case-en" lang="en" data-i18n-skip>What types of business challenges can you help with?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>بتقدموا حلول لإيه بالضبط؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>Business strategy and growth, operations, marketing, AI adoption, organisational development, HR and practical professional learning. We begin by understanding the problem before suggesting scope.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>في الاستراتيجية والنمو والتشغيل والتسويق والذكاء الاصطناعي والتطوير التنظيمي والموارد البشرية والتدريب. البداية دايمًا بفهم المشكلة قبل اقتراح نطاق العمل.</p></div>
+  </details>
+<details class="faq-item">
+    <summary><span class="case-en" lang="en" data-i18n-skip>How do we start an engagement?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>إزاي نبدأ التعاون؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>Contact the team by WhatsApp message or email, briefly describe your challenge, and discuss the next steps. The scope and commercial terms are agreed separately.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ابعت رسالة واتساب للتيم أو بريد إلكتروني ووصف مختصر للمشكلة. بعد كده بنحدد الخطوات ونطاق العمل والشروط التجارية بشكل منفصل.</p></div>
+  </details>
+<details class="faq-item">
+    <summary><span class="case-en" lang="en" data-i18n-skip>Is the initial consultation free?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>هل الاستشارة الأولى مجانية؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>No standard free consultation is advertised. Any diagnostic work, meeting or proposal process is clarified by the team before a commitment is made.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الموقع مش بيعلن عن استشارة مجانية تلقائيًا. التيم هيوضح طبيعة أي جلسة أو تشخيص وشروطها قبل الاتفاق.</p></div>
+  </details>
+<details class="faq-item">
+    <summary><span class="case-en" lang="en" data-i18n-skip>Do you work with companies outside Egypt?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>بتتعاملوا مع شركات خارج مصر؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>The portfolio reflects professional exposure in Egypt and GCC markets. Delivery model, location, availability and terms are confirmed for each inquiry.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>البورتفوليو بيعرض خبرة مهنية في مصر ودول الخليج. طريقة التنفيذ والمكان والتوافر بيتحددوا حسب كل طلب.</p></div>
+  </details>
+<details class="faq-item">
+    <summary><span class="case-en" lang="en" data-i18n-skip>Where can I find training materials and videos?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>فين ألاقي الويبنارات والأدوات؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>Use the dedicated Webinars &amp; Tools collection for 9 Winners webinars and 14 listed resources; personal Reels have a separate library.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>من قسم الموارد تقدر تفتح 9 ويبنارات لـWinners و14 أداة ومورد. الريلز الشخصية ليها مكتبة منفصلة.</p></div>
+  </details>
+<details class="faq-item">
+    <summary><span class="case-en" lang="en" data-i18n-skip>How can I reach the team?</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>أتواصل مع التيم إزاي؟</span><span class="faq-plus" aria-hidden="true">+</span></summary>
+    <div class="faq-answer"><p class="case-en" lang="en" data-i18n-skip>WhatsApp messages only: 01024335473 (Egypt). Email: saiedsahaarty@gmail.com. There is no telephone-call booking at that number on this website.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>رسائل واتساب فقط: 01024335473، أو البريد: saiedsahaarty@gmail.com. الموقع مش بيعرض الرقم كوسيلة لاتصالات هاتفية.</p></div>
+  </details></div>
+</div></section>
 <section class="closing" id="contact">
       <div class="shell closing-inner"><img class="closing-portrait" src="./hero-saied.webp" alt="Dr. Saied El Saharty, Business Solutions Consultant" loading="lazy" decoding="async">
         <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Business consulting, strategic planning, growth and marketing, operating-model improvement, organizational transformation, professional training and practical AI adoption — grounded in real business needs.</p><p class="team-contact-note">For collaborations and business inquiries, connect directly with my team via WhatsApp or email.</p></div>
@@ -1315,6 +1545,10 @@ html[lang="ar"] .meet-photo-caption{direction:ltr}
       </div>
     </section>
   </main>
+<nav class="mobile-quick-actions" aria-label="Quick mobile actions">
+  <a class="mobile-quick-solution" href="#business-solutions"><span aria-hidden="true">✦</span><span class="case-en" lang="en" data-i18n-skip>Solutions</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الحلول</span></a>
+  <a class="mobile-quick-whatsapp" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◉</span><span class="case-en" lang="en" data-i18n-skip>Team WhatsApp</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>واتساب التيم</span></a>
+</nav>
   <footer class="footer"><div class="shell footer-inner"><span><b>© <span id="year"></span> Dr. Saied El Saharty · Dr. Koliverastein.</b> All rights reserved.</span><span>Independent professional portfolio. Training reference is not an institutional endorsement. <a href="#top">Back to top ↑</a></span></div></footer>
   <div class="overlay" id="collection-overlay" aria-hidden="true" role="presentation">
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="collection-title">
@@ -1463,5 +1697,5 @@ filters.forEach(function(button){
  });
 });
 })();
-</script></body>
+</script><script src="./mobile-ux.js" defer></script></body>
 </html>
