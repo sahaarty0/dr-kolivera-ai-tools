@@ -331,6 +331,36 @@ html{scroll-padding-top:95px}
 .closing-inner{padding-right:270px}
 @media(max-width:900px){.closing-inner{padding-right:165px}}
 @media(max-width:770px){.hero-alias{font-size:15px;margin:0 0 19px;gap:9px}.hero-alias>span:last-child{font-size:9px}.team-contact-actions{width:100%;align-items:stretch}.team-contact-actions .action{min-width:0}.closing-inner{padding-right:0}.closing-portrait{opacity:.23!important}.header .brand-sub{font-size:10px}}
+
+/* FIXED brand artwork: force every supplier logo inside a real, bounded tile */
+.credential-brand-showcase{display:grid!important;grid-template-columns:minmax(180px,240px) minmax(0,1fr)!important;column-gap:28px!important;align-items:center!important;min-height:0!important;overflow:hidden!important;padding:27px 30px!important}
+.credential-brand-intro{min-width:0!important;max-width:240px}
+.credential-brand-intro strong{font-size:clamp(19px,2.2vw,25px)!important}
+.credential-brand-logos{display:grid!important;grid-template-columns:repeat(4,minmax(0,1fr))!important;align-items:center!important;gap:12px!important;min-width:0!important;width:100%!important;max-width:100%!important}
+.credential-brand-logos>.brand-showcase-logo,
+.credential-brand-logos>.brand-showcase-word{display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;min-width:0!important;max-width:100%!important;height:84px!important;min-height:84px!important;max-height:84px!important;overflow:hidden!important;position:relative!important;padding:11px!important;box-sizing:border-box!important;border-radius:14px!important;flex:none!important}
+.credential-brand-logos>.brand-showcase-logo>img{display:block!important;width:100%!important;max-width:100%!important;height:100%!important;max-height:100%!important;min-height:0!important;min-width:0!important;object-fit:contain!important;object-position:center center!important;position:static!important;transform:none!important;filter:none!important;flex:none!important;border:none!important;border-radius:0!important;box-shadow:none!important;margin:0!important;padding:0!important;inset:auto!important}
+.credential-brand-logos>.ibm-showcase{background:#081f3f!important}
+.credential-brand-logos>.shrm-showcase{background:#fbfaf6!important}
+.credential-brand-logos>.sap-showcase{font-size:25px!important}
+.credential-brand-logos>.aihr-showcase{font-size:19px!important}
+@media(max-width:1060px){.credential-brand-showcase{grid-template-columns:200px minmax(0,1fr)!important;gap:18px!important}.credential-brand-logos{gap:8px!important}}
+@media(max-width:820px){.credential-brand-showcase{grid-template-columns:1fr!important;gap:23px!important}.credential-brand-intro{max-width:none}.credential-brand-logos>.brand-showcase-logo,.credential-brand-logos>.brand-showcase-word{height:77px!important;min-height:77px!important;max-height:77px!important}}
+@media(max-width:480px){.credential-brand-showcase{padding:20px!important}.credential-brand-logos{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:9px!important}.credential-brand-logos>.brand-showcase-logo,.credential-brand-logos>.brand-showcase-word{height:78px!important;min-height:78px!important;max-height:78px!important}}
+/* Distinguish actual hotel experience from clients and training work */
+.hospitality-experience-card{grid-column:span 1;overflow:hidden}
+.hospitality-card-body{display:flex;gap:17px;align-items:flex-start;padding:21px 21px 24px}
+.hospitality-icon{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;color:#e7bb65;border-radius:13px;background:#122c4e;box-shadow:0 8px 20px rgba(10,30,60,.13)}
+.hospitality-profile{flex:1;min-width:0}
+.hospitality-eyebrow{display:block;color:#94732e;font-size:9px;font-weight:900;letter-spacing:.11em;line-height:1.65}
+.hotel-brand-grid{display:flex;flex-wrap:wrap;gap:8px;margin-top:13px}
+.hotel-brand{display:inline-flex;align-items:center;border:1px solid #dfe5ee;border-radius:8px;background:#f4f7fb;padding:7px 11px;font-weight:800;font-size:11px;line-height:1.4;color:#122944}
+.hotel-sector-divider{height:1px;background:#e5e9f0;margin:16px 0}
+.hotel-other-names{font-size:11px;line-height:1.8;color:#52657c;margin:7px 0 0}
+.prior-hospitality{margin-top:11px;padding-top:10px;border-top:1px solid #e3e8ef}
+.prior-hospitality strong{color:#182d49}
+@media(min-width:1050px){.hospitality-experience-card{grid-column:span 2}.hospitality-card-body{align-items:center}}
+@media(max-width:700px){.hospitality-card-body{padding:17px;gap:12px}.hospitality-icon{width:40px;height:40px;flex-basis:40px}.hotel-brand{font-size:10px}}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
@@ -406,7 +436,7 @@ html{scroll-padding-top:95px}
             <div class="career-entry"><span class="career-no">05</span><div><b>HR Consultant</b><span>Smart Solutions (SSB)</span></div></div>
             <div class="career-entry"><span class="career-no">06</span><div><b>HR Business Consultant</b><span>Cross-industry consulting engagements</span></div></div>
           </div>
-          <div class="previous-roles"><b>Earlier professional experience:</b> Toucan Group · Ibn Khaldun School · Branding Agency · Sunset Boat (Sheraton).</div>
+          <div class="previous-roles"><b>Earlier professional experience:</b> Toucan Group · Ibn Khaldun School · Branding Agency · Sunset Boat (Sheraton).<div class="prior-hospitality"><strong>Hotel-industry experience:</strong> Fairmont Nile City · Sheraton · Sofitel · Blue Nile · Four Seasons</div></div>
         </div>
         <div class="career-aside">
           <div class="career-aside-head">SPECIALIZED FOCUS</div>
@@ -672,14 +702,36 @@ html{scroll-padding-top:95px}
   </section>
   <section class="section" id="partners">
     <div class="shell">
-      <div class="section-heading visual-heading"><div><div class="section-kicker">SELECTED ORGANIZATIONS & BRANDS</div><h2>Cross-industry exposure.</h2><p class="section-intro">The portfolio presents the following organizations across consulting, recruitment, training and business-support contexts. This is a selected partners-and-clients list, not a claim of direct employment at each organization.</p></div><figure class="editorial-photo"><img src="./gallery/03-youth-development.jpg" alt="Dr. Saied at a professional group development event" loading="lazy" decoding="async"><figcaption>Cross-sector engagement<span aria-hidden="true">↗</span></figcaption></figure></div>
+      <div class="section-heading visual-heading"><div><div class="section-kicker">SELECTED ORGANIZATIONS & BRANDS</div><h2>Cross-industry exposure.</h2><p class="section-intro">Organizations and brands represented across business consulting, recruitment, training, industry partnerships and previous professional experience. Hotel-industry experience is labeled separately from business clients and partners.</p></div><figure class="editorial-photo"><img src="./gallery/03-youth-development.jpg" alt="Dr. Saied at a professional group development event" loading="lazy" decoding="async"><figcaption>Cross-sector engagement<span aria-hidden="true">↗</span></figcaption></figure></div>
       <div class="partner-grid">
         <div class="partner-card"><div class="partner-cat">BANKING & FINANCE</div><div class="partner-names partner-chips"><span>National Bank of Egypt</span><span>Bank of Palestine</span><span>Industrial Bank of Kuwait</span></div></div>
         <div class="partner-card"><div class="partner-cat">FMCG & FOOD</div><div class="partner-names">Kellogg's · Temmy's · Bayara · Rich Bake · Mass Food · Friday Ice Cream · Sinai Rose</div></div>
         <div class="partner-card"><div class="partner-cat">INDUSTRIAL & MANUFACTURING</div><div class="partner-names">Arafa Group · Unionaire · Egyplast · Egytrafo · eFile · Organi Group (مجموعة العرجاني)</div></div>
         <div class="partner-card"><div class="partner-cat">REAL ESTATE & CONSTRUCTION</div><div class="partner-names">ARX Development · Future Expo Real Estate · Composition Architecture</div></div>
         <div class="partner-card"><div class="partner-cat">EDUCATION & SERVICES</div><div class="partner-names">Winners · ALO Travel</div></div>
-        <div class="partner-card"><div class="partner-cat">HOSPITALITY, RETAIL & LIFESTYLE</div><div class="partner-names">Gourmet · Royal Lounge · Snips · Rose Garden</div></div>
+        <div class="partner-card hospitality-experience-card">
+  <div class="partner-cat">HOTELS, HOSPITALITY &amp; LIFESTYLE</div>
+  <div class="hospitality-card-body">
+    <div class="hospitality-icon" aria-hidden="true">
+      <svg viewBox="0 0 48 48" width="35" height="35" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round">
+        <path d="M9 43V12h30v31M5 43h38M15 12V6h18v6M19 6V3h10v3M16 20h5v5h-5zM27 20h5v5h-5zM16 30h5v5h-5zM27 30h5v5h-5zM21 43V36h6v7"/>
+      </svg>
+    </div>
+    <div class="hospitality-profile">
+      <span class="hospitality-eyebrow">HOTEL INDUSTRY · PROFESSIONAL EXPERIENCE</span>
+      <div class="hotel-brand-grid" aria-label="Hotels where Dr. Saied has professional experience">
+        <span class="hotel-brand">Fairmont Nile City</span>
+        <span class="hotel-brand">Sheraton</span>
+        <span class="hotel-brand">Sofitel</span>
+        <span class="hotel-brand">Blue Nile</span>
+        <span class="hotel-brand">Four Seasons</span>
+      </div>
+      <div class="hotel-sector-divider" aria-hidden="true"></div>
+      <span class="hospitality-eyebrow">OTHER HOSPITALITY &amp; LIFESTYLE ENGAGEMENTS</span>
+      <p class="hotel-other-names">Gourmet · Royal Lounge · Snips · Rose Garden</p>
+    </div>
+  </div>
+</div>
       </div>
     </div>
   </section>
