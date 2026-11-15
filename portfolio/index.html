@@ -480,6 +480,99 @@ html[lang="ar"] .career-entry{direction:rtl}
 @media(max-width:620px){.story-grid{grid-template-columns:1fr}.cases-editorial-mark{display:none}.story-card-body{padding:23px 19px}.header-wa-short{display:inline}.header-wa-long{display:none}.header .brand-name{font-size:10px}.header-utilities .top-cta{padding:9px!important}.hero-actions .hero-solution-cta{width:100%}.solutions-choices,.solution-answer{padding:20px}.solution-answer h3{font-size:22px}}
 @media(max-width:380px){.header .brand-mark{display:none}.site-language-button{min-width:0}.brand-name{font-size:9px!important}}
 @media(prefers-reduced-motion:reduce){.story-card,.solution-option,.solution-whatsapp,.site-language-button{transition:none!important}}
+
+/* Personal video library: original reels, editorial cover cards, no misleading reposted thumbnails */
+.meet-koliverastein{position:relative;background:linear-gradient(170deg,#f8fafc,#fff 60%,#f4f7fb)}
+.meet-koliverastein:before{content:"";position:absolute;inset:0 0 auto;height:180px;pointer-events:none;background:radial-gradient(ellipse 400px 200px at 85% 15%,rgba(220,173,70,.12),transparent)}
+.meet-intro{display:flex;gap:30px;align-items:end;justify-content:space-between;margin-bottom:27px;position:relative}
+.meet-intro h2{color:#0e2746;font-size:clamp(31px,4vw,49px);letter-spacing:-.04em;margin:11px 0}
+.meet-intro .section-intro{max-width:735px}
+.meet-counter{width:100px;min-height:106px;border-top:3px solid #d7ad52;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;background:linear-gradient(125deg,#0b2443,#204161);color:#fff;box-shadow:0 15px 38px rgba(7,27,53,.14);border-radius:0 0 13px 13px}
+.meet-counter strong{font-size:41px;line-height:1;color:#ecc576;font-weight:850}
+.meet-counter span{font-size:10px;color:#c4d4e6}
+.meet-feature{display:grid;grid-template-columns:minmax(0,1.04fr) minmax(0,.96fr);min-height:320px;background:#0b2140;border-radius:21px;overflow:hidden;box-shadow:0 21px 45px rgba(10,30,56,.12)}
+.meet-feature-visual{position:relative;background:#182c47;overflow:hidden;display:flex;align-items:stretch}
+.meet-feature-visual img{width:100%;height:100%;object-fit:contain;object-position:center;display:block;filter:none;min-height:320px;max-height:470px}
+.meet-photo-caption{position:absolute;left:13px;bottom:13px;right:13px;background:rgba(7,23,45,.8);backdrop-filter:blur(9px);border:1px solid rgba(245,210,143,.28);color:#fff;font-size:9px;font-weight:900;letter-spacing:.10em;text-align:center;padding:12px 9px;border-radius:7px}
+.meet-feature-content{display:flex;flex-direction:column;justify-content:center;gap:17px;padding:35px 39px;background:radial-gradient(circle at 100% 0%,#21486c,#081d38 72%);color:#edf3fa}
+.meet-feature-tag{color:#e4b65c;font-size:10px;font-weight:900;letter-spacing:.12em}
+.meet-feature-content h3{color:#fff;font-size:clamp(23px,3vw,36px);line-height:1.27;letter-spacing:-.038em;margin:0}
+.meet-feature-content p{color:#bfd0e2;font-size:13px;line-height:1.75;margin:0}
+.meet-watch{display:flex;align-items:center;justify-content:space-between;gap:11px;padding:13px 15px;background:#e1bd70;color:#102944;border-radius:9px;font-size:12px;font-weight:900;width:fit-content;min-width:250px;transition:.25s}
+.meet-watch:hover{background:#f0d38e;transform:translateY(-2px)}
+.meet-watch-play{font-size:12px;display:grid;place-items:center;width:29px;height:29px;border-radius:50%;background:#102a4d;color:#f6d88e}
+.meet-feature-content .meet-platform-note{font-size:10px;color:#a9bbd0;line-height:1.5}
+.reel-library-head{display:flex;align-items:end;justify-content:space-between;gap:18px;margin-top:47px;margin-bottom:20px}
+.reel-library-head h3{font-size:25px;color:#0b2746;margin:0 0 6px}
+.reel-library-head p{font-size:12px;line-height:1.6;color:#6b7d93;margin:0}
+.reel-visible-status{display:flex;align-items:baseline;gap:7px;color:#61748c}
+.reel-visible-status strong{font-size:27px;color:#aa843c}
+.reel-visible-status span{font-size:11px;font-weight:700}
+.reel-filter-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:21px}
+.reel-filter{display:flex;align-items:center;justify-content:center;border:1px solid #d5dee9;border-radius:999px;padding:10px 15px;background:#fff;color:#496078;font-size:11px;font-weight:850;transition:.22s}
+.reel-filter:hover{border-color:#c8aa6c;color:#092743}
+.reel-filter.selected{background:#0b294c;border-color:#0b294c;color:#fff}
+.personal-reels-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.personal-reel-card{min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #e4eaf2;border-radius:15px;overflow:hidden;box-shadow:0 8px 23px rgba(15,38,68,.04);transition:transform .25s,box-shadow .25s}
+.personal-reel-card:hover{transform:translateY(-5px);box-shadow:0 17px 40px rgba(14,35,68,.12)}
+.personal-reel-card[hidden]{display:none!important}
+.personal-reel-link{display:flex;flex:1;flex-direction:column;color:inherit;text-decoration:none}
+.reel-cover{display:flex;flex-direction:column;justify-content:space-between;aspect-ratio:4/4.3;background:linear-gradient(147deg,#0b294b 10%,#175e71 58%,#17324d);padding:18px;position:relative;isolation:isolate;overflow:hidden}
+.reel-cover:before{content:"";position:absolute;width:165px;height:165px;right:-80px;top:16px;border-radius:50%;border:1px solid rgba(255,255,255,.28);box-shadow:0 0 0 22px rgba(255,255,255,.035),0 0 0 61px rgba(255,255,255,.028);z-index:-1}
+.reel-cover:after{content:"";position:absolute;inset:auto -40px -100px;width:235px;height:235px;border-radius:50%;background:radial-gradient(circle,rgba(235,195,105,.16),transparent 64%);pointer-events:none;z-index:-1}
+.reel-cover-b{background:linear-gradient(147deg,#13264b,#4b3d72 58%,#193c54)}
+.reel-cover-c{background:linear-gradient(147deg,#10223b,#144c6b 54%,#22708a)}
+.reel-cover-d{background:linear-gradient(147deg,#10273c,#355a49 56%,#25465b)}
+.reel-cover-top,.reel-cover-bottom{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:9px;letter-spacing:.10em;font-weight:850;color:#d5e5f1}
+.reel-cover-top span:last-child{color:#f1cf81}
+.reel-cover-center{display:flex;flex-direction:column;align-items:flex-start;gap:17px}
+.reel-cover-center strong{font-size:clamp(17px,2vw,23px);letter-spacing:-.02em;color:#fff;line-height:1.2;max-width:195px;overflow-wrap:anywhere}
+.reel-play{display:grid;place-items:center;width:58px;height:58px;background:rgba(236,190,104,.16);border:1px solid rgba(236,190,104,.75);border-radius:50%;font-size:19px;color:#f5cc78;padding-left:3px;box-shadow:0 0 0 10px rgba(236,190,104,.07);transition:.2s}
+.personal-reel-card:hover .reel-play{background:rgba(242,200,111,.33);transform:scale(1.08)}
+.reel-copy{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.reel-category{font-size:9px;font-weight:900;color:#9d762e;letter-spacing:.095em}
+.reel-copy h3{font-size:13px;font-weight:850;color:#102845;line-height:1.65;margin:0;min-height:43px}
+.reel-copy .reel-subline{font-size:11px;line-height:1.55;color:#74849a;margin:0 0 12px}
+.reel-action{display:block;border-top:1px solid #e6ebf0;margin-top:auto;padding-top:12px;font-size:11px;font-weight:900;color:#123f6c}
+.reel-disclaimer{font-size:11px;color:#718298;line-height:1.65;margin-top:20px}
+.hero-actions .meet-hero-cta{background:rgba(225,186,100,.075);color:#e4c073;border:1px solid rgba(226,181,95,.5)}
+.hero-actions .meet-hero-cta:hover{background:rgba(225,186,100,.18)}
+/* Direct, verified professional and social accounts from supplied Linktree */
+.socials-section{background:#f2f6fa;position:relative;overflow:hidden}
+.socials-section:before{content:"";position:absolute;width:600px;height:500px;top:-250px;right:-110px;border-radius:50%;border:1px solid rgba(200,170,95,.18);box-shadow:0 0 0 100px rgba(15,45,75,.022);pointer-events:none}
+.socials-section-header{display:grid;grid-template-columns:minmax(0,1fr) minmax(240px,340px);gap:26px;align-items:center;margin-bottom:29px}
+.socials-intro h2{font-size:clamp(30px,4vw,47px);color:#0a2747;margin:12px 0}
+.socials-intro .section-intro{max-width:725px}
+.socials-linktree-prominence{display:flex;flex-direction:column;gap:9px;padding:25px 30px;border-radius:17px;background:linear-gradient(145deg,#0a2648,#1c4964);box-shadow:0 16px 36px rgba(11,34,60,.13);color:#fff;position:relative;overflow:hidden}
+.socials-linktree-prominence:after{content:"↗";position:absolute;right:-6px;top:-40px;font-size:155px;color:rgba(234,197,126,.09);pointer-events:none}
+.socials-linktree-prominence>span{font-size:9px;letter-spacing:.16em;color:#e9c174;font-weight:900}
+.socials-linktree-prominence>strong{font-size:25px}
+.socials-linktree-prominence>a{font-size:12px;font-weight:800;color:#f1d48e;text-decoration:none;width:fit-content;border-bottom:1px solid rgba(241,212,142,.54);padding-bottom:5px;position:relative;z-index:1}
+.socials-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.social-network{display:flex;align-items:center;gap:12px;min-width:0;border:1px solid #dfe7f0;padding:17px 14px;border-radius:12px;background:#fff;text-decoration:none;color:#183450;transition:transform .24s,border-color .24s,box-shadow .24s}
+.social-network:hover{transform:translateY(-4px);border-color:#cfb477;box-shadow:0 12px 25px rgba(12,41,68,.095)}
+.social-network-logo{display:grid;place-items:center;flex:0 0 41px;width:41px;height:41px;background:#e8eef8;border-radius:10px;font-size:15px;font-weight:900;color:#0b467d;text-transform:lowercase}
+.social-linkedin .social-network-logo{background:#e1f0fb;color:#1264a3}
+.social-instagram .social-network-logo{background:#ffebf2;color:#b2346e}
+.social-facebook .social-network-logo{background:#e4eefe;color:#2566bb}
+.social-kolivera .social-network-logo{background:#122f53;color:#ecca7a}
+.social-tiktok .social-network-logo{background:#152735;color:#f4e9d8}
+.social-telegram .social-network-logo{background:#e5f7ff;color:#1685ae}
+.social-snapchat .social-network-logo{background:#fffad7;color:#857500}
+.social-network-info{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.social-network-info strong{font-size:12px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.social-network-info small{font-size:10px;color:#77879b;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.social-arrow{font-size:17px;color:#a58341;align-self:flex-start}
+.socials-footnote{margin:18px 0 0;font-size:10px;line-height:1.7;color:#718299}
+html[lang="ar"] .meet-feature-content h3,html[lang="ar"] .reel-library-head h3,html[lang="ar"] .socials-intro h2{font-family:Tajawal,system-ui,sans-serif;letter-spacing:0}
+html[lang="ar"] .reel-copy h3{text-align:right;font-family:Tajawal,system-ui,sans-serif}
+html[lang="ar"] .meet-feature-content{direction:rtl}
+html[lang="ar"] .meet-photo-caption{direction:ltr}
+@media(max-width:1060px){.personal-reels-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.socials-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:800px){.meet-feature{grid-template-columns:1fr}.meet-feature-visual img{height:300px;min-height:0}.meet-feature-content{padding:29px}.personal-reels-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.socials-section-header{grid-template-columns:1fr}.socials-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.meet-intro{align-items:flex-start;gap:12px}.meet-counter{width:75px;min-height:82px}.meet-counter strong{font-size:31px}.meet-counter span{font-size:8px;text-align:center}.meet-feature-content h3{font-size:25px}.meet-watch{min-width:0;width:100%;font-size:12px}.meet-feature-visual img{height:235px}.reel-library-head{margin-top:30px}.personal-reels-grid{gap:11px}.reel-cover{padding:12px;aspect-ratio:4/5}.reel-cover-center strong{font-size:15px}.reel-play{width:43px;height:43px;font-size:16px}.reel-cover-top,.reel-cover-bottom{font-size:7px}.reel-copy{padding:13px}.reel-copy h3{font-size:11px}.reel-copy .reel-subline{font-size:9px}.reel-filter{padding:9px 12px;font-size:10px}.socials-grid{gap:9px}.social-network{padding:12px 10px;gap:9px}.social-network-logo{width:32px;height:32px;flex-basis:32px;font-size:12px}.social-network-info strong{font-size:11px}.social-network-info small{font-size:9px}}
+@media(max-width:390px){.personal-reels-grid,.socials-grid{grid-template-columns:1fr}.reel-cover{aspect-ratio:16/9}.meet-feature-visual img{height:210px}}
+@media(prefers-reduced-motion:reduce){.personal-reel-card,.reel-play,.reel-filter,.social-network,.meet-watch{transition:none!important}}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
@@ -489,7 +582,7 @@ html[lang="ar"] .career-entry{direction:rtl}
         <div class="brand-mark">SE</div><div class="brand-words"><span class="brand-name">DR. SAIED EL SAHARTY</span><span class="brand-sub">Dr. Koliverastein</span></div>
       </a>
       <nav class="header-nav" aria-label="Main website navigation">
-  <a href="https://drive.google.com/file/d/1dJf9bpIdNM4wQhdOZRT4fdQHXvyGUieR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View full executive portfolio PDF on Google Drive">Portfolio PDF</a><a href="#cases">Cases</a><a href="#business-solutions">Solutions</a><a href="#academic-qualifications">Degrees</a><a href="#career">Experience</a><a href="#certifications">Credentials</a><a href="#partners">Clients</a><a href="#resources">Resources</a>
+  <a href="https://drive.google.com/file/d/1dJf9bpIdNM4wQhdOZRT4fdQHXvyGUieR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View full executive portfolio PDF on Google Drive">Portfolio PDF</a><a href="#meet-koliverastein">Videos</a><a href="#cases">Cases</a><a href="#business-solutions">Solutions</a><a href="#academic-qualifications">Degrees</a><a href="#career">Experience</a><a href="#certifications">Credentials</a><a href="#partners">Clients</a><a href="#resources">Resources</a>
 </nav><div class="header-utilities"><button type="button" id="language-toggle" class="site-language-button" aria-label="عرض الموقع باللغة العربية" aria-pressed="false">العربية</button><button type="button" class="language-toggle" id="language-toggle" aria-label="عرض الموقع باللغة العربية" aria-pressed="false">العربية</button><a class="top-cta" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Contact my team on WhatsApp only"><span class="header-wa-long">WhatsApp the Team ↗</span><span class="header-wa-short">WhatsApp ↗</span></a></div>
     </div>
   </header>
@@ -503,7 +596,7 @@ html[lang="ar"] .career-entry{direction:rtl}
           <div class="hero-lead">Business Solutions. Strategy, Growth & Transformation.</div>
           <p class="hero-desc">Business Solutions Consultant, Strategic Advisor and Executive Trainer with 15+ years of cross-industry experience in Egypt and the GCC. Bridging business strategy, operations, marketing, financial performance, people development and AI-driven transformation to turn challenges into practical results.</p>
           <div class="roles"><span class="role-pill">Business Strategy &amp; Growth</span><span class="role-pill">Operations &amp; Performance</span><span class="role-pill">Marketing &amp; Business Development</span><span class="role-pill">AI &amp; Digital Transformation</span><span class="role-pill">HR &amp; Organizational Solutions</span></div>
-          <a class="academic-quicklink" href="#academic-qualifications"><span class="academic-quicklink-icon">✦</span><span><strong>DBA &amp; 2 MBA Degrees</strong><small>Explore Academic Qualifications</small></span><span class="academic-quicklink-arrow">↗</span></a><div class="hero-actions"><a class="action hero-solution-cta" href="#business-solutions">Explore Business Solutions <span aria-hidden="true">↗</span></a>
+          <a class="academic-quicklink" href="#academic-qualifications"><span class="academic-quicklink-icon">✦</span><span><strong>DBA &amp; 2 MBA Degrees</strong><small>Explore Academic Qualifications</small></span><span class="academic-quicklink-arrow">↗</span></a><div class="hero-actions"><a class="action meet-hero-cta" href="#meet-koliverastein">Meet Dr. Koliverastein <span aria-hidden="true">▷</span></a><a class="action hero-solution-cta" href="#business-solutions">Explore Business Solutions <span aria-hidden="true">↗</span></a>
             <a class="action portfolio-pdf-action" href="https://drive.google.com/file/d/1dJf9bpIdNM4wQhdOZRT4fdQHXvyGUieR/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" aria-label="View complete Executive Portfolio PDF in a new tab"><span class="action-icon" aria-hidden="true">▤</span> View Executive Portfolio <span aria-hidden="true">↗</span></a>
             <button type="button" class="action primary" data-open="webinars"><span class="action-icon">▷</span> Winners Webinars <span aria-hidden="true">↗</span></button>
             <button type="button" class="action secondary" data-open="tools"><span class="action-icon">◈</span> AI Assistant Tools &amp; Materials <span aria-hidden="true">↗</span></button>
@@ -521,6 +614,158 @@ html[lang="ar"] .career-entry{direction:rtl}
     <div class="strip-item"><div class="strip-icon">↗</div><div><b><span class="counter" data-counter="6800" data-suffix="+">6,800+</span> Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
   </div>
 </div>
+<section class="section meet-koliverastein" id="meet-koliverastein">
+ <div class="shell">
+  <div class="section-kicker">BEYOND THE CV · REAL VOICE</div>
+  <div class="meet-intro">
+   <div><h2>Meet Dr. Koliverastein.</h2>
+    <p class="section-intro case-en" lang="en" data-i18n-skip>Consulting isn't only about frameworks and slides. These are real clips of how I explain ideas, challenge assumptions and connect strategy, people and technology.</p>
+    <p class="section-intro case-ar" lang="ar" dir="rtl" data-i18n-skip>الاستشارات مش سلايدز ونظريات وبس. دي لقطات حقيقية من طريقتي في شرح الأفكار ومناقشة الافتراضات وربط الاستراتيجية بالناس والتكنولوجيا.</p>
+   </div>
+   <div class="meet-counter"><strong>11</strong><span class="case-en" lang="en" data-i18n-skip>Original Reels</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ريل من محتوايا</span></div>
+  </div>
+  <div class="meet-feature">
+   <div class="meet-feature-visual">
+    <img src="./gallery/01-executive-workshop.jpg" alt="Dr. Saied El Saharty in a real executive business workshop" loading="lazy" decoding="async">
+    <div class="meet-photo-caption">FROM PRACTICE, NOT JUST THEORY.</div>
+   </div>
+   <div class="meet-feature-content">
+    <span class="meet-feature-tag">FEATURED · BUSINESS CONSULTING</span>
+    <h3 class="case-en" lang="en" data-i18n-skip>Good consulting starts with a clear method.</h3>
+    <h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>السر في الاستشارة الناجحة؟ المراحل المنظمة.</h3>
+    <p class="case-en" lang="en" data-i18n-skip>Before the tools, diagnosis matters. I explain why the order of the steps can be just as important as the solution itself.</p>
+    <p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>قبل الأدوات، لازم نفهم المشكلة صح. وفي الريل ده بشرح ليه ترتيب مراحل الاستشارة مهم زي الحل نفسه.</p>
+    <a class="meet-watch" href="https://www.facebook.com/reel/1378168990866299" target="_blank" rel="noopener noreferrer"><span class="meet-watch-play" aria-hidden="true">▶</span><span class="case-en" lang="en" data-i18n-skip>Watch the featured Reel</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل المختار</span><span aria-hidden="true">↗</span></a>
+    <p class="meet-platform-note case-en" lang="en" data-i18n-skip>Opens the original Facebook Reel. The workshop photograph is illustrative, not a frame from the video.</p>
+    <p class="meet-platform-note case-ar" lang="ar" dir="rtl" data-i18n-skip>الرابط بيفتح الفيديو الأصلي على فيسبوك. صورة الورشة للتوضيح، مش لقطة من الريل.</p>
+   </div>
+  </div>
+  <div class="reel-library-head">
+   <div><h3 class="case-en" lang="en" data-i18n-skip>Explore the Reel library</h3><h3 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>اكتشف مكتبة الريلز</h3>
+   <p class="case-en" lang="en" data-i18n-skip>Original links, selected by topic — consulting, HR, AI and personal development.</p><p class="case-ar" lang="ar" dir="rtl" data-i18n-skip>روابط أصلية مصنفة حسب الاستشارات والـHR والذكاء الاصطناعي والتطوير.</p>
+   </div><div class="reel-visible-status" aria-live="polite"><strong id="reel-visible-count">11</strong><span class="case-en" lang="en" data-i18n-skip>Reels</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>ريل</span></div>
+  </div>
+  <div class="reel-filter-row" role="group" aria-label="Filter personal reels by subject">
+    <button type="button" class="reel-filter selected" data-reel-filter="all" aria-pressed="true"><span class="case-en" lang="en" data-i18n-skip>All Reels</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>كل الريلز</span></button>
+<button type="button" class="reel-filter" data-reel-filter="business" aria-pressed="false"><span class="case-en" lang="en" data-i18n-skip>Business &amp; Logic</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الأعمال والمنطق</span></button>
+<button type="button" class="reel-filter" data-reel-filter="ai" aria-pressed="false"><span class="case-en" lang="en" data-i18n-skip>AI &amp; Automation</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الذكاء الاصطناعي</span></button>
+<button type="button" class="reel-filter" data-reel-filter="learning" aria-pressed="false"><span class="case-en" lang="en" data-i18n-skip>Learning &amp; HR</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>التدريب والـHR</span></button>
+<button type="button" class="reel-filter" data-reel-filter="personal" aria-pressed="false"><span class="case-en" lang="en" data-i18n-skip>Personal Brand</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>الهوية الشخصية</span></button>
+  </div>
+  <div class="personal-reels-grid"><article class="personal-reel-card" data-reel-category="business">
+ <a href="https://www.facebook.com/reel/1378168990866299" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: السر في الاستشارة الناجحة: المراحل المنظمة">
+ <div class="reel-cover reel-cover-a">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>01</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>CONSULTING METHOD</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">CONSULTING METHOD</span><h3 dir="auto">السر في الاستشارة الناجحة: المراحل المنظمة</h3><p class="reel-subline">The method behind good consulting</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="ai">
+ <a href="https://www.facebook.com/reel/28318407274507543" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: Recruitment Scraping Automation — GPT × Claude × n8n">
+ <div class="reel-cover reel-cover-b">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>02</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>AI WORKFLOWS</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">AI WORKFLOWS</span><h3 dir="auto">Recruitment Scraping Automation — GPT × Claude × n8n</h3><p class="reel-subline">Connecting AI tools in recruitment</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="ai">
+ <a href="https://www.facebook.com/reel/4483039111913535" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: 3 نقاط لازم تعرفهم قبل بناء ESS بالـAI">
+ <div class="reel-cover reel-cover-c">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>03</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>EMPLOYEE SELF SERVICE</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">EMPLOYEE SELF SERVICE</span><h3 dir="auto">3 نقاط لازم تعرفهم قبل بناء ESS بالـAI</h3><p class="reel-subline">Three essentials before building ESS</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="personal">
+ <a href="https://www.facebook.com/reel/898363415209823" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: الاستمرارية وقيمة المحتوى أهم من مجرد النشر">
+ <div class="reel-cover reel-cover-d">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>04</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>PERSONAL BRAND</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">PERSONAL BRAND</span><h3 dir="auto">الاستمرارية وقيمة المحتوى أهم من مجرد النشر</h3><p class="reel-subline">Consistency makes content valuable</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="business">
+ <a href="https://www.facebook.com/reel/1134555931204237" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: OKRs vs KPIs">
+ <div class="reel-cover reel-cover-a">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>05</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>PERFORMANCE</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">PERFORMANCE</span><h3 dir="auto">OKRs vs KPIs</h3><p class="reel-subline">Goals and performance measures</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="business">
+ <a href="https://www.facebook.com/reel/993734666986093" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: تصميم سياسات الترقيات في 4 مراحل">
+ <div class="reel-cover reel-cover-b">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>06</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>POLICY DESIGN</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">POLICY DESIGN</span><h3 dir="auto">تصميم سياسات الترقيات في 4 مراحل</h3><p class="reel-subline">Four steps for promotion policies</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="personal">
+ <a href="https://www.facebook.com/reel/1785833802678808" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: من قلب الحدث: Digital Transformation">
+ <div class="reel-cover reel-cover-d">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>07</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>BEHIND THE SCENES</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">BEHIND THE SCENES</span><h3 dir="auto">من قلب الحدث: Digital Transformation</h3><p class="reel-subline">A candid moment, no scripted edit</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="learning">
+ <a href="https://www.facebook.com/reel/1549126166523809" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: مقتطف من ويبنار Personal Branding for HR">
+ <div class="reel-cover reel-cover-c">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>08</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>HR PERSONAL BRANDING</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">HR PERSONAL BRANDING</span><h3 dir="auto">مقتطف من ويبنار Personal Branding for HR</h3><p class="reel-subline">A short excerpt from a Winners webinar</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="personal">
+ <a href="https://www.facebook.com/reel/1080582877989427" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: محدش هيقف معاك إلا وإنت مثبت نفسك">
+ <div class="reel-cover reel-cover-a">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>09</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>CAREER MINDSET</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">CAREER MINDSET</span><h3 dir="auto">محدش هيقف معاك إلا وإنت مثبت نفسك</h3><p class="reel-subline">Show your value before expecting support</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="business">
+ <a href="https://www.facebook.com/reel/1077001901877794" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: 3 مشاريب في اليوم؟ موقف من بيئة العمل">
+ <div class="reel-cover reel-cover-b">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>010</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>WORKPLACE LOGIC</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">WORKPLACE LOGIC</span><h3 dir="auto">3 مشاريب في اليوم؟ موقف من بيئة العمل</h3><p class="reel-subline">Workplace rules and everyday decisions</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article>
+<article class="personal-reel-card" data-reel-category="learning">
+ <a href="https://www.facebook.com/reel/1577490173330618" target="_blank" rel="noopener noreferrer" class="personal-reel-link" aria-label="Watch Facebook Reel: هل ROI هو المقياس الوحيد لتقييم الأداء؟">
+ <div class="reel-cover reel-cover-d">
+  <div class="reel-cover-top"><span>DR. KOLIVERASTEIN</span><span>011</span></div>
+  <div class="reel-cover-center"><span class="reel-play" aria-hidden="true">▶</span><strong>PERFORMANCE &amp; ROI</strong></div>
+  <span class="reel-cover-bottom">WATCH ON FACEBOOK&nbsp; ↗</span>
+ </div>
+ <div class="reel-copy"><span class="reel-category">PERFORMANCE &amp; ROI</span><h3 dir="auto">هل ROI هو المقياس الوحيد لتقييم الأداء؟</h3><p class="reel-subline">What ROI doesn't measure on its own</p><span class="reel-action"><span class="case-en" data-i18n-skip>Watch Reel ↗</span><span class="case-ar" lang="ar" dir="rtl" data-i18n-skip>شاهد الريل ↗</span></span></div>
+ </a>
+</article></div>
+  <p class="reel-disclaimer case-en" lang="en" data-i18n-skip>Videos link to the original Facebook Reels. Playback may require Facebook access. One clip was shared from the Winners page; the separate Winners Webinars collection remains unchanged.</p>
+  <p class="reel-disclaimer case-ar" lang="ar" dir="rtl" data-i18n-skip>كل فيديو بيفتح رابطه الأصلي على فيسبوك، وممكن يحتاج تسجيل دخول للمشاهدة. أحد المقاطع منشور من صفحة Winners، وقسم Winners Webinars الأساسي لم يتغير.</p>
+ </div>
+</section>
 <section class="section case-studies-section" id="cases">
  <div class="shell">
   <div class="section-heading cases-heading">
@@ -1010,7 +1255,60 @@ html[lang="ar"] .career-entry{direction:rtl}
         </div>
       </div>
     </section>
-    <section class="closing" id="contact">
+    <section class="section socials-section" id="digital-presence">
+ <div class="shell">
+   <div class="socials-section-header">
+    <div class="socials-intro"><span class="section-kicker">DIGITAL PRESENCE</span><h2 class="case-en" lang="en" data-i18n-skip>Stay connected. Keep learning.</h2><h2 class="case-ar" lang="ar" dir="rtl" data-i18n-skip>خلّينا على تواصل.</h2>
+     <p class="section-intro case-en" lang="en" data-i18n-skip>Explore my verified professional and social channels collected from my official Linktree. Find the conversations, ideas, behind-the-scenes moments and practical business content that resonate with you.</p>
+     <p class="section-intro case-ar" lang="ar" dir="rtl" data-i18n-skip>دي الحسابات اللي موجودة في الـLinktree الخاص بيا. هتلاقي عليها أفكار أعمال، محتوى عملي، وكواليس من شغلي وتدريباتي.</p>
+    </div>
+    <div class="socials-linktree-prominence"><span>ALL MY LINKS</span><strong>Dr. Saharty</strong><a href="https://linktr.ee/saharty" target="_blank" rel="noopener noreferrer">Open Linktree <span aria-hidden="true">↗</span></a></div>
+   </div>
+   <div class="socials-grid"><a class="social-network social-linkedin" href="https://linkedin.com/in/saharty0" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's LinkedIn">
+ <span class="social-network-logo" aria-hidden="true">in</span>
+ <span class="social-network-info"><strong>LinkedIn</strong><small dir="ltr">saharty0</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-instagram" href="https://instagram.com/dr.saied_elsaharty?r=nametag" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Instagram">
+ <span class="social-network-logo" aria-hidden="true">ig</span>
+ <span class="social-network-info"><strong>Instagram</strong><small dir="ltr">@dr.saied_elsaharty</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-facebook" href="https://www.facebook.com/Saiedsaharty/" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Facebook Page">
+ <span class="social-network-logo" aria-hidden="true">f</span>
+ <span class="social-network-info"><strong>Facebook Page</strong><small dir="ltr">Saied El Saharty</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-kolivera" href="https://www.facebook.com/koliverastein" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Dr. Koliverastein">
+ <span class="social-network-logo" aria-hidden="true">k</span>
+ <span class="social-network-info"><strong>Dr. Koliverastein</strong><small dir="ltr">Facebook Reels</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-facebook" href="https://www.facebook.com/20shabrawy" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Facebook Profile">
+ <span class="social-network-logo" aria-hidden="true">f</span>
+ <span class="social-network-info"><strong>Facebook Profile</strong><small dir="ltr">20shabrawy</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-tiktok" href="https://vm.tiktok.com/ZMd3nYKsg/" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's TikTok">
+ <span class="social-network-logo" aria-hidden="true">tk</span>
+ <span class="social-network-info"><strong>TikTok</strong><small dir="ltr">TikTok account</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-telegram" href="https://t.me/Elsahaarty" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Telegram">
+ <span class="social-network-logo" aria-hidden="true">tg</span>
+ <span class="social-network-info"><strong>Telegram</strong><small dir="ltr">@Elsahaarty</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a>
+<a class="social-network social-snapchat" href="https://www.snapchat.com/add/saied_elsaharty" target="_blank" rel="noopener noreferrer" aria-label="Open Dr. Saied's Snapchat">
+ <span class="social-network-logo" aria-hidden="true">sc</span>
+ <span class="social-network-info"><strong>Snapchat</strong><small dir="ltr">@saied_elsaharty</small></span>
+ <span class="social-arrow" aria-hidden="true">↗</span>
+ </a></div>
+   <p class="socials-footnote case-en" lang="en" data-i18n-skip>Social links are sourced from the supplied Linktree and linked Facebook Reels. For business inquiries, please contact my team via the WhatsApp number or email shown below.</p>
+   <p class="socials-footnote case-ar" lang="ar" dir="rtl" data-i18n-skip>الحسابات مستخرجة من الـLinktree والريلز اللي بعتّها. للاستشارات والتعاون تواصل مع التيم من خلال واتساب أو البريد الموجودين أسفل الصفحة.</p>
+ </div>
+</section>
+<section class="closing" id="contact">
       <div class="shell closing-inner"><img class="closing-portrait" src="./hero-saied.webp" alt="Dr. Saied El Saharty, Business Solutions Consultant" loading="lazy" decoding="async">
         <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Business consulting, strategic planning, growth and marketing, operating-model improvement, organizational transformation, professional training and practical AI adoption — grounded in real business needs.</p><p class="team-contact-note">For collaborations and business inquiries, connect directly with my team via WhatsApp or email.</p></div>
         <div class="team-contact-actions"><a class="action primary" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Message the team on WhatsApp at 01024335473"><span aria-hidden="true">◉</span> Team WhatsApp <span aria-hidden="true">↗</span></a><a class="action secondary" href="mailto:saiedsahaarty@gmail.com?subject=Business%20Consulting%20Inquiry">Send Email <span aria-hidden="true">↗</span></a><div class="team-contact-details"><span>WhatsApp only: <strong>01024335473</strong></span><span>Email: <strong>saiedsahaarty@gmail.com</strong></span></div></div>
@@ -1150,5 +1448,20 @@ html[lang="ar"] .career-entry{direction:rtl}
   if(supportsIO){var counterObserver=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animateCount(e.target);counterObserver.unobserve(e.target)}})},{threshold:.8});counters.forEach(function(c){counterObserver.observe(c)})}
   else counters.forEach(function(c){animateCount(c)});
 })();
-</script><script src="./experience.js" defer></script></body>
+</script><script src="./experience.js" defer></script><script>
+(function(){
+"use strict";
+var filters=Array.prototype.slice.call(document.querySelectorAll("[data-reel-filter]"));
+var items=Array.prototype.slice.call(document.querySelectorAll("[data-reel-category]"));
+var count=document.getElementById("reel-visible-count");
+filters.forEach(function(button){
+ button.addEventListener("click",function(){
+   var selected=button.getAttribute("data-reel-filter"),visible=0;
+   filters.forEach(function(b){var on=b===button;b.classList.toggle("selected",on);b.setAttribute("aria-pressed",on?"true":"false")});
+   items.forEach(function(item){var show=selected==="all"||item.getAttribute("data-reel-category")===selected;item.hidden=!show;if(show)visible++});
+   if(count)count.textContent=String(visible);
+ });
+});
+})();
+</script></body>
 </html>
