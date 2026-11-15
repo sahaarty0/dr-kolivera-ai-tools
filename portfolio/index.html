@@ -104,15 +104,18 @@
 
 /* Professional training photo gallery, preserving user-provided source photography */
 .training-gallery-section{background:#f8fafc}
-.training-gallery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.training-gallery-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.training-gallery-card:nth-child(7){grid-column:1/-1}
 .training-gallery-card{background:#fff;border:1px solid #e2e8ef;border-radius:12px;overflow:hidden;box-shadow:0 7px 21px rgba(10,25,49,.035);transition:transform .2s,box-shadow .2s}
 .training-gallery-card:hover{transform:translateY(-3px);box-shadow:0 13px 29px rgba(10,25,49,.095)}
-.training-gallery-card .training-photo{aspect-ratio:4/3;background-image:url("./training-gallery.webp");background-repeat:no-repeat;background-size:400% 200%;width:100%;background-color:#0c213d}
+.training-gallery-card .training-photo-link{display:block;aspect-ratio:4/3;overflow:hidden;background:#152741}
+.training-gallery-card .training-photo{display:block;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:auto;filter:none;transform:none;transition:transform .3s ease}
+.training-gallery-card .training-photo-link:hover .training-photo,.training-gallery-card .training-photo-link:focus-visible .training-photo{transform:scale(1.025)}
+.training-gallery-card:nth-child(7) .training-photo-link{aspect-ratio:17/6}
 .training-gallery-card h3{font-size:12px;font-weight:800;color:var(--navy);line-height:1.6;margin:15px 15px 5px}
 .training-gallery-card p{font-size:11px;color:#6c7a91;line-height:1.6;margin:0 15px 18px}
-@media(max-width:920px){.training-gallery-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:920px){.training-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:650px){.training-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.training-gallery-card h3{font-size:11px;margin:12px 11px 4px}.training-gallery-card p{font-size:10px;margin:0 11px 12px}}
-@media(max-width:380px){.training-gallery-grid{grid-template-columns:1fr}.training-gallery-card .training-photo{aspect-ratio:4/3}}
+@media(max-width:380px){.training-gallery-grid{grid-template-columns:1fr}.training-gallery-card:nth-child(7) .training-photo-link{aspect-ratio:2/1}}
 @media(min-width:981px){.hero-photo-stage{min-height:625px}.hero-photo-stage .hero-photo{max-height:695px;mask-image:linear-gradient(to bottom,#000 0%,#000 90%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 90%,transparent 100%)}}
 
 /* Brand-aware issuer identities and certificate navigation */
@@ -239,15 +242,50 @@
       <div><div class="section-kicker">REAL-WORLD LEARNING</div><h2>Training &amp; Workshops in Action.</h2><p class="section-intro">Selected moments from professional workshops, executive sessions, educational programs and learning communities — connecting knowledge with hands-on practice.</p></div>
     </div>
     <div class="training-gallery-grid">
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:0% 0%" role="img" aria-label="Business professional facilitating a meeting-room workshop with participants"></div><h3>Executive Workshops</h3><p>Business discussions &amp; facilitated learning</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:33.3333% 0%" role="img" aria-label="Instructor leading an indoor group training session"></div><h3>Management &amp; HR Training</h3><p>Interactive instructor-led sessions</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:66.6667% 0%" role="img" aria-label="Group portrait from a youth and volunteering development event"></div><h3>Youth Development</h3><p>Engagement &amp; capability building</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:100% 0%" role="img" aria-label="Instructor presenting during a classroom workshop"></div><h3>Hands-on Learning</h3><p>Knowledge applied in practice</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:0% 100%" role="img" aria-label="Business instructor explaining digital marketing concepts on a whiteboard"></div><h3>Marketing &amp; Business</h3><p>Applied digital learning</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:33.3333% 100%" role="img" aria-label="Instructor explaining learning and development content during training"></div><h3>Professional Development</h3><p>Building practical business skills</p></article>
-      <article class="training-gallery-card"><div class="training-photo" style="background-position:66.6667% 100%" role="img" aria-label="Instructor and participants in a group photograph after a learning session"></div><h3>Training Communities</h3><p>Sharing experience &amp; outcomes</p></article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/01-executive-workshop.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Executive Workshops">
+    <img class="training-photo" src="./gallery/01-executive-workshop.jpg" alt="Dr. Saied leading a business workshop in a large meeting room" width="2048" height="1368" loading="lazy" decoding="async">
+  </a>
+  <h3>Executive Workshops</h3><p>Business discussions &amp; facilitated learning</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/02-management-training.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Management &amp; HR Training">
+    <img class="training-photo" src="./gallery/02-management-training.jpg" alt="Dr. Saied training a group of participants in a classroom" width="960" height="960" loading="lazy" decoding="async">
+  </a>
+  <h3>Management &amp; HR Training</h3><p>Interactive instructor-led sessions</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/03-youth-development.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Youth Development">
+    <img class="training-photo" src="./gallery/03-youth-development.jpg" alt="Group photograph during a youth development session" width="2048" height="1536" loading="lazy" decoding="async">
+  </a>
+  <h3>Youth Development</h3><p>Engagement &amp; capability building</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/04-hands-on-workshop.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Hands-on Learning">
+    <img class="training-photo" src="./gallery/04-hands-on-workshop.jpg" alt="Dr. Saied presenting a classroom session during a youth development event" width="1434" height="2048" loading="lazy" decoding="async">
+  </a>
+  <h3>Hands-on Learning</h3><p>Knowledge applied in practice</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/05-marketing-education.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Marketing &amp; Business">
+    <img class="training-photo" src="./gallery/05-marketing-education.jpg" alt="Dr. Saied explaining marketing concepts on a whiteboard" width="1242" height="947" loading="lazy" decoding="async">
+  </a>
+  <h3>Marketing &amp; Business</h3><p>Applied digital learning</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/06-professional-learning.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Professional Development">
+    <img class="training-photo" src="./gallery/06-professional-learning.jpg" alt="Dr. Saied presenting a learning and development workshop" width="949" height="1544" loading="lazy" decoding="async">
+  </a>
+  <h3>Professional Development</h3><p>Building practical business skills</p>
+</article>
+<article class="training-gallery-card">
+  <a class="training-photo-link" href="./gallery/07-training-community.jpg" target="_blank" rel="noopener noreferrer" aria-label="View original photo: Training Communities">
+    <img class="training-photo" src="./gallery/07-training-community.jpg" alt="Group photograph of Dr. Saied and participants following a professional learning event" width="1700" height="640" loading="lazy" decoding="async">
+  </a>
+  <h3>Training Communities</h3><p>Sharing experience &amp; outcomes</p>
+</article>
     </div>
-    <p class="fine-note">Actual photographs supplied by Dr. Saied El Saharty. The original images have been combined into lightweight website thumbnails without changing the people depicted.</p>
+    <p class="fine-note">Original, full-resolution photographs supplied by Dr. Saied El Saharty. Select any image to view the original photograph at its natural resolution. Faces and details have not been altered.</p>
   </div>
 </section>
 <section class="section competencies" id="expertise">
