@@ -14,10 +14,9 @@ Live site: https://sahaarty0.github.io/dr-kolivera-ai-tools/portfolio/
 - Search and filtering inside modal collections; mobile layout, keyboard focus management and metadata.
 
 ## Content controls / pending links
-The following three entries appear visibly but are not clickable because their exact current public destination was not established:
-1. CV Analyzer — historical link prefix points to another tool in an old master.
-2. قرار وزير العمل 162 لسنة 2026 — source link was truncated.
-3. دليل الامتثال 19 — source link was truncated.
+The following two entries appear visibly but are not clickable because their direct file URL was truncated in the original source:
+1. قرار وزير العمل 162 لسنة 2026.
+2. دليل الامتثال 19.
 
 Some Google Drive materials and folders may require permission from their owner. The page must not claim private backend sheets are public tools.
 
@@ -29,3 +28,13 @@ Some Google Drive materials and folders may require permission from their owner.
 
 ## Lovable handoff
 The owner requested Lovable as the intended visual builder. This first deployed GitHub Pages source is an independent working implementation; it is **not represented as an output generated inside Lovable**. The page can be imported/rebuilt/refined in Lovable later, then synced back to GitHub if Lovable's project and GitHub actions are available.
+
+## Executive portfolio refresh — 2026-11-15
+- Corrected professional experience to **15+ years**.
+- Added sourced portfolio metrics: **7,000+ professionals trained**, **6,800+ employees supported**, and multi-sector work in Egypt and the GCC.
+- Added original professional portrait cropped directly from the user's supplied executive portfolio slide: `dr-saied-portrait.webp` (not an AI-generated likeness).
+- Added named leadership/professional roles at Sinai Rose (Abnaa Sinai) Group, HR Winners, AIA College, LCIS College, Dr. Koliverastein Business Solutions, Smart Solutions (SSB), and historical roles mentioned in the CV.
+- Added eight practice areas, systems experience (Odoo, Oracle, SAP, Maestro), certification/course list, selected partners and clients, historical marketing campaign metrics, and four brief customer testimonials from uploaded source slides.
+- Upgraded CV Analyzer destination to the exact Apps Script web app URL explicitly supplied by the owner:
+  https://script.google.com/macros/s/AKfycbyWeqCbTL0M0emixAhxL40howEVTN-7tnSFQfEW7yV-JM12secssCLk9tvIdyF3eu2iIQ/exec
+- Pending unverified links reduced to two historical resource entries: Ministerial Decision 162/2026 and Compliance Guide 19.
