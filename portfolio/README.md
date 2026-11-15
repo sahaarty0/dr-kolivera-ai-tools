@@ -88,3 +88,11 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Full front-end QA via a temporary same-origin iframe test harness at viewport widths **320, 360, 390, 430, 768, 1024 px**. Tests passed: **no horizontal document overflow, no header-brand/control overlap, menu open + close on link, mobile sticky actions and body padding, Arabic and English switching at 390 px**.
 - Existing 11 personal Reels, 9 Winners webinars, 14 listed resources, Executive Portfolio PDF and contact channels preserved.
 - Temporary QA page removed after testing.
+
+## Featured Suez Canal Authority leadership training and date-free Facebook recommendations
+- User-supplied original group photograph is stored without changes in `gallery/08-suez-canal-authority-leadership.jpg`, 1280×960, Git blob `cae35b3822730e738f90e4d56599d399a49cb88d`. Visible as a wide editorial banner, with English caption `Training Suez Canal Authority Leaders.`; link opens original full image. Banner uses focal positioning to preserve all people.
+- Removed four old unsourced testimonial quotes from `#recognition` and replaced with six screenshot-derived Facebook page recommendations: Samah Ragab, Abdelkader Helal, Dina Shabaan, Eman Shaker, Norhan Ayman and Dahab Reda.
+- In English UI: original English recommendation and clearly labeled translations of brief Arabic excerpts. In Arabic UI: matching original-language excerpts and identified English-to-Arabic translation for Samah.
+- Date/timestamps **must never appear in any review/testimonial card**. No ratings or completed consulting project outcomes are attributed to general Facebook service recommendations.
+- Link viewers to the user's supplied source `https://www.facebook.com/Saiedsaharty/reviews/?id=100064186146568&sk=reviews`.
+- Deployed release QA confirmed six names, original page link, English-only photo caption and no dates displayed; original photo file exact byte-for-byte integrity verified from SHA.
