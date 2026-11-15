@@ -58,3 +58,17 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Academic qualifications added on owner instruction, in a section distinct from courses and professional certification cards: **DBA (Doctor of Business Administration) — Faculty of Commerce, Benha University**; **MBA — Benha University**; **MBA — CMU-CIC**. CMU-CIC is deliberately kept in the user's own literal wording rather than expanded to an unconfirmed institution name. Degree award dates and certificate scans were not supplied.
 - Corrected the displayed issuer of **Create a Business Plan** from LinkedIn Learning to **Harvard University**, according to the user's explicit correction. The portfolio slide previously showed a different learning provider; this attribution has not independently been checked against an award certificate, so do not treat it as independently verified.
 - All 14 prior credential/course entries, 9 webinars, 14 resource items and gallery images remain as before.
+
+## Business cases, solutions selector and bilingual update — Nov 2026
+- Reviewed source working materials in connected Drive: 90-day group HR recovery & implementation framework, integrated operational diagnostic agenda, and Winners market research / 7Ps positioning study.
+- Built **three fictional/anonymised illustrative business scenarios** based on these methodologies, NOT published as actual completed client engagements or verified outcome claims.
+  1. Multi-company operating-model recovery and 90-day execution cadence.
+  2. Market positioning for services business serving B2B and B2C audiences.
+  3. Education-service workflow redesign before automation.
+- Added six-choice **Business Solutions** interactive selector: growth, operations, marketing & sales, AI/digital, organisation/HR, learning & capability; WhatsApp message is generated from selected area and optional self-entered context; no website-side form submission or data persistence.
+- Added functional **Arabic / English** toggle with RTL layout, persisted language choice and translated key page text, solution details and resource UI. Proper nouns and some formal certificate names intentionally retain their English identifiers.
+- QA read-only browser confirmed three examples and disclaimers, six selector options, working WhatsApp prefill, Arabic/English switching including RTL, nine webinar links, fourteen tools and full PDF link.
+- Requested assets pending user supply:
+  - Self-introduction/personal Reels links, to populate a future "Meet Dr. Koliverastein" video area.
+  - Linktree URL, to identify and connect verified professional social profiles.
+- Maintain careful separation between illustrative scenarios, consulting proposals, verified executed results and third-party/client identities. Never ascribe outcome percentages to cases without evidence.
