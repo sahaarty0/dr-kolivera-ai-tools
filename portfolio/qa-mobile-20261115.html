@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Temporary Mobile QA</title>
+<style>body{font:14px system-ui;background:#dce5ee;margin:0;padding:20px;color:#112542}.outer{display:flex;gap:24px;align-items:flex-start}.screen{flex-shrink:0;border:4px solid #14243e;border-radius:19px;overflow:hidden;background:white;box-shadow:0 18px 50px #1233}iframe{width:390px;height:800px;display:block;border:0}pre{background:white;white-space:pre-wrap;padding:20px;border-radius:11px;line-height:1.6;min-width:400px;max-width:600px}h2{margin:0 0 14px}@media(max-width:850px){.outer{flex-direction:column}pre{min-width:0}}</style>
+</head><body><h2>Temporary responsive test: 320 / 360 / 390 / 430 / 768 / 1024</h2><div class="outer"><div class="screen"><iframe id="target" src="./index.html?iframe-mobile-qa=20261115" title="Site responsive test" loading="eager"></iframe></div><pre id="results">TEST IS RUNNING...</pre></div>
+<script>
+(function(){
+ var fr=document.getElementById("target"),out=document.getElementById("results"),widths=[320,360,390,430,768,1024],results=[];
+ function wait(ms){return new Promise(function(done){setTimeout(done,ms)})}
+ function safeRect(el){return el?el.getBoundingClientRect():null}
+ function visible(el,w){if(!el)return false;var s=w.getComputedStyle(el);return s.display!=="none"&&s.visibility!=="hidden"}
+ function test(width){
+   var w=fr.contentWindow,d=w.document,html=d.documentElement;
+   var button=d.getElementById("mobile-nav-toggle"),nav=d.getElementById("mobile-nav"),bar=d.querySelector(".mobile-quick-actions"),lang=d.getElementById("language-toggle"),header=d.querySelector(".header"),brand=d.querySelector(".brand"),utilities=d.querySelector(".header-utilities");
+   var a=safeRect(brand),b=safeRect(utilities),grid=d.querySelector(".visitor-cards"),caseCards=d.querySelectorAll(".visitor-card"),faq=d.querySelectorAll(".faq-item"),steps=d.querySelectorAll(".engagement-step");
+   var rows={width:width,frameInnerWidth:w.innerWidth,documentClientWidth:html.clientWidth,scrollWidth:html.scrollWidth,horizontalOverflow:html.scrollWidth>html.clientWidth+2,
+       mobileMenuVisible:visible(button,w),stickyMobileActionsVisible:visible(bar,w),
+       duplicateLanguageButtons:d.querySelectorAll("#language-toggle").length,
+       headerItemsOverlap:a&&b?a.right>b.left+4:null,
+       visitorCards:caseCards.length,processSteps:steps.length,faqs:faq.length,
+       visitorGridColumns:grid?w.getComputedStyle(grid).gridTemplateColumns:null};
+   if(width<=1070){
+     button.click();rows.menuOpens=button.getAttribute("aria-expanded")==="true"&&!nav.hidden;
+     var go=nav.querySelector('a[href="#how-i-work"]');
+     if(go){go.click();rows.menuClosesOnLink=nav.hidden&&button.getAttribute("aria-expanded")==="false";}
+   }
+   if(width===390&&lang){
+     var orig=html.lang; if(orig==="ar")lang.click();
+     lang.click();rows.arabicLang=html.lang==="ar"&&html.dir==="rtl";lang.click();rows.englishRestored=html.lang==="en"&&html.dir==="ltr";
+   }
+   if(width<=770){
+      rows.stickyBodyPadding=parseFloat(w.getComputedStyle(d.body).paddingBottom);
+      rows.bottomBarHeight=bar?Math.round(bar.getBoundingClientRect().height):0;
+      rows.stickyDoesNotCoverContent=rows.stickyBodyPadding>=rows.bottomBarHeight-2;
+   }
+   results.push(rows);out.textContent=JSON.stringify(results,null,2);
+ }
+ async function run(){
+  try{
+   await wait(1300);
+   for(var i=0;i<widths.length;i++){
+     var width=widths[i];fr.style.width=width+"px";await wait(750);test(width);
+   }
+   out.textContent="QA_COMPLETE\n"+JSON.stringify(results,null,2);
+  }catch(err){out.textContent="QA_ERROR: "+err.message+"\n"+JSON.stringify(results,null,2)}
+ }
+ fr.addEventListener("load",run,{once:true});
+})();
+</script></body></html>
