@@ -72,3 +72,10 @@ The owner requested Lovable as the intended visual builder. This first deployed 
   - Self-introduction/personal Reels links, to populate a future "Meet Dr. Koliverastein" video area.
   - Linktree URL, to identify and connect verified professional social profiles.
 - Maintain careful separation between illustrative scenarios, consulting proposals, verified executed results and third-party/client identities. Never ascribe outcome percentages to cases without evidence.
+
+## Nov 2026 — Meet Dr. Koliverastein + verified digital presence
+- User provided official Linktree: https://linktr.ee/saharty. Read and verified listed profile destinations at source, and added 8 direct links: LinkedIn `linkedin.com/in/saharty0`, Instagram `instagram.com/dr.saied_elsaharty`, Facebook Page `facebook.com/Saiedsaharty`, Facebook page `facebook.com/koliverastein` (sourced from personal Reels), personal Facebook `facebook.com/20shabrawy`, TikTok `vm.tiktok.com/ZMd3nYKsg/`, Telegram `t.me/Elsahaarty`, Snapchat `snapchat.com/add/saied_elsaharty`; plus Linktree hub. The direct business inquiry still goes ONLY to team WhatsApp number 01024335473 or saiedsahaarty@gmail.com, as originally requested.
+- All 11 user-supplied Facebook Reel URLs are included separately from original Winners Webinars and categorized by business logic, AI, personal brand, and learning. Captions/titles were inspected directly on the publicly accessible Facebook pages; the 11th video is posted under Winners Advisory Home Services, not the personal page.
+- Editorial covers are intentionally custom CSS designs, **not purported frames/screenshots from the video**. One featured card uses an existing user-supplied workshop photo, explicitly marked as a representative photo. All links open original Facebook Reels in new tabs, because inline Facebook embeds can be restricted by login/privacy.
+- Category filters update the visible card count. Bilingual English/Arabic labels are provided for all major user-facing section content.
+- Preserve link authorship/source and do not replace any of the supplied Reel IDs with guesses. Revalidate any Linktree or short TikTok links if they change.
