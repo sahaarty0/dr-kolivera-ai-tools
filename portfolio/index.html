@@ -114,9 +114,47 @@
 @media(max-width:650px){.training-gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.training-gallery-card h3{font-size:11px;margin:12px 11px 4px}.training-gallery-card p{font-size:10px;margin:0 11px 12px}}
 @media(max-width:380px){.training-gallery-grid{grid-template-columns:1fr}.training-gallery-card .training-photo{aspect-ratio:4/3}}
 @media(min-width:981px){.hero-photo-stage{min-height:625px}.hero-photo-stage .hero-photo{max-height:695px;mask-image:linear-gradient(to bottom,#000 0%,#000 90%,transparent 100%);-webkit-mask-image:linear-gradient(to bottom,#000 0%,#000 90%,transparent 100%)}}
+
+/* Brand-aware issuer identities and certificate navigation */
+.cert-section{position:relative;overflow:hidden}
+.cert-section:before{content:"";position:absolute;right:-200px;top:40px;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(219,182,93,.06),transparent 66%);pointer-events:none}
+.cert-filter-controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin:24px 0 14px}
+.cert-filter{padding:11px 14px;border:1px solid #d7dfea;border-radius:999px;background:#fff;color:#40516b;font-size:11px;font-weight:800;transition:background .22s,color .22s,border-color .22s,transform .22s}
+.cert-filter:hover{transform:translateY(-2px);border-color:#b8a36d}
+.cert-filter.is-active{background:var(--navy);border-color:var(--navy);color:#fff}
+.cert-results{color:#7b879a;font-size:11px;margin-bottom:18px;min-height:18px}
+.cert-results #cert-visible-count{color:#102e52;font-weight:800}
+.cert-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.cert-card.credential-card{min-height:215px;padding:20px;display:flex;flex-direction:column;gap:13px;overflow:hidden;position:relative;box-shadow:0 5px 15px rgba(13,30,57,.025);transition:transform .24s ease,box-shadow .24s ease,border-color .24s ease}
+.cert-card.credential-card:hover{transform:translateY(-5px);border-color:#c7ae6a;box-shadow:0 18px 35px rgba(10,29,51,.09)}
+.cert-card[hidden]{display:none!important}
+.cert-top{display:flex;align-items:flex-start;justify-content:space-between;gap:9px;min-height:73px}
+.cert-logo{display:flex;flex-direction:column;align-items:flex-start;gap:8px;max-width:135px;min-width:0;min-height:63px}
+.cert-logo img{width:36px;height:36px;object-fit:contain;border-radius:6px;display:block}
+.cert-logo img[src]{background:transparent}
+.cert-monogram{height:36px;width:36px;display:grid;place-items:center;border-radius:9px;background:#e7eef5;color:#113256;font-size:22px;font-weight:900}
+.cert-brand-wordmark{font-size:11px;font-weight:800;color:var(--brand,#123052);line-height:1.3;max-width:100%;overflow-wrap:anywhere}
+.brand-sap{--brand:#1778c8}.brand-shrm{--brand:#136eb4}.brand-aihr{--brand:#873dce}.brand-hrci{--brand:#7f275e}.brand-ibm{--brand:#2873ad}.brand-google{--brand:#317fc1}.brand-linkedin{--brand:#116aa0}.brand-ibmi,.brand-data{--brand:#425678}
+.cert-kind{font-size:8px;line-height:1.45;font-weight:800;text-align:right;color:#a18038;letter-spacing:.045em;max-width:105px;overflow-wrap:anywhere}
+.cert-card.credential-card h3{margin:4px 0 3px;color:var(--navy);font-size:14px;line-height:1.48;letter-spacing:-.012em;min-height:0}
+.cert-footer{border-top:1px solid #edf0f5;padding-top:12px;margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.cert-issuer{font-size:10px;color:#79879a;line-height:1.45}.cert-corner{font-size:16px;color:#c0aa75}
+@media(max-width:920px){.cert-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.cert-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cert-card.credential-card{padding:16px;min-height:226px}.cert-kind{font-size:7px}.cert-card.credential-card h3{font-size:12px}.cert-filter{font-size:10px;padding:9px 11px}}
+@media(max-width:390px){.cert-grid{grid-template-columns:1fr}.cert-card.credential-card{min-height:195px}}
+/* Motion enhancement (respects reduced motion and keeps the unenhanced page readable) */
+.scroll-track{position:fixed;z-index:80;left:0;top:0;height:3px;width:100%;pointer-events:none;background:transparent}
+.scroll-track>span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ae873a,#f1c96b);transition:width .14s linear;box-shadow:0 1px 7px rgba(219,182,93,.4)}
+.back-to-top{position:fixed;right:22px;bottom:22px;z-index:55;border:1px solid #d5bd80;background:#0d2442;color:#fff;width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-size:21px;box-shadow:0 9px 26px rgba(7,25,48,.2);opacity:0;transform:translateY(14px);pointer-events:none;transition:opacity .23s ease,transform .23s ease,background .23s ease}
+.back-to-top.is-visible{opacity:1;transform:translateY(0);pointer-events:auto}.back-to-top:hover{background:#25486f}
+.js-motion .motion-reveal{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1);transition-delay:var(--reveal-delay,0ms)}
+.js-motion .motion-reveal.is-visible{opacity:1;transform:translateY(0)}
+.hero-grid>div:first-child{animation:hero-enter .85s cubic-bezier(.22,1,.36,1) both}
+@keyframes hero-enter{from{opacity:.15;transform:translateY(22px)}to{opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.js-motion .motion-reveal{opacity:1!important;transform:none!important;transition:none!important}.hero-grid>div:first-child{animation:none!important}.scroll-track>span{transition:none!important}.back-to-top{transition:none!important}}
 </style>
 </head>
-<body>
+<body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
   <header class="header">
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="Saied El Saharty home">
@@ -146,9 +184,9 @@
     </section>
     <div class="strip">
   <div class="shell strip-inner">
-    <div class="strip-item"><div class="strip-icon">✦</div><div><b>15+ Years of Experience</b><span>Business strategy, growth, operations and transformation</span></div></div>
-    <div class="strip-item"><div class="strip-icon">◎</div><div><b>7,000+ Professionals Trained</b><span>Learning and capability development in Egypt and the GCC</span></div></div>
-    <div class="strip-item"><div class="strip-icon">↗</div><div><b>6,800+ Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
+    <div class="strip-item"><div class="strip-icon">✦</div><div><b><span class="counter" data-counter="15" data-suffix="+">15+</span> Years of Experience</b><span>Business strategy, growth, operations and transformation</span></div></div>
+    <div class="strip-item"><div class="strip-icon">◎</div><div><b><span class="counter" data-counter="7000" data-suffix="+">7,000+</span> Professionals Trained</b><span>Learning and capability development in Egypt and the GCC</span></div></div>
+    <div class="strip-item"><div class="strip-icon">↗</div><div><b><span class="counter" data-counter="6800" data-suffix="+">6,800+</span> Employees Supported</b><span>HR systems and business partnership across organizations</span></div></div>
   </div>
 </div>
 <section class="section" id="achievements">
@@ -172,7 +210,7 @@
           <div class="career-heading"><span class="small-bullet"></span><span>SELECTED LEADERSHIP & PROFESSIONAL ROLES</span></div>
           <div class="career-list">
             <div class="career-entry"><span class="career-no">01</span><div><b>Group Business Partner Director</b><span>Sinai Rose (Abnaa Sinai) Group</span></div></div>
-            <div class="career-entry"><span class="career-no">02</span><div><b>HR Consultant & Instructor</b><span>HR Winners — Business Consultation & Training Services</span></div></div>
+            <div class="career-entry"><span class="career-no">02</span><div><b>HR &amp; Business Consultant</b><span>HR Winners — Business Consultation &amp; Training Services</span></div></div>
             <div class="career-entry"><span class="career-no">03</span><div><b>Business Administration Instructor</b><span>AIA College & LCIS College</span></div></div>
             <div class="career-entry"><span class="career-no">04</span><div><b>Founder</b><span>Dr. Koliverastein for Business Solutions Services</span></div></div>
             <div class="career-entry"><span class="career-no">05</span><div><b>HR Consultant</b><span>Smart Solutions (SSB)</span></div></div>
@@ -229,20 +267,170 @@
   </section>
   <section class="section cert-section" id="certifications">
     <div class="shell">
-      <div class="section-heading"><div><div class="section-kicker">PROFESSIONAL CREDENTIALS</div><h2>Continuous professional development.</h2><p class="section-intro">Selected certifications, learning programs and applied technical credentials included in the executive portfolio.</p></div></div>
-      <div class="cert-grid">
-        <div class="cert-card"><span>HR CERTIFICATION</span><b>PHRi — Professional in Human Resources, International</b><small>HRCI</small></div>
-        <div class="cert-card"><span>HR CERTIFICATION</span><b>HRCI Human Resource Associate</b><small>HRCI</small></div>
-        <div class="cert-card"><span>HR DEVELOPMENT</span><b>Associate Certificate in Human Resource Management</b></div>
-        <div class="cert-card"><span>HR LEARNING</span><b>Foundations of SHRM Certification</b></div>
-        <div class="cert-card"><span>GOVERNANCE</span><b>Compliance and Risk Management</b></div>
-        <div class="cert-card"><span>GENERATIVE AI</span><b>Generative AI: Introduction and Applications</b><small>IBM / Coursera</small></div>
-        <div class="cert-card"><span>BUSINESS</span><b>Create a Business Plan</b></div>
-        <div class="cert-card"><span>FINANCE</span><b>Financial Performance</b></div>
-        <div class="cert-card"><span>ANALYTICS</span><b>Analyze Your Data</b></div>
-        <div class="cert-card"><span>DIGITAL MARKETING</span><b>Google Ads Apps Certification</b></div>
-      </div>
-      <p class="fine-note">Credential names are taken from the supplied portfolio. Individual courses are not presented as licenses or professional designations.</p>
+      <div class="section-heading"><div><div class="section-kicker">PROFESSIONAL CREDENTIALS</div><h2>Credentials that power business impact.</h2><p class="section-intro">A curated record of professional certifications and continuing learning across SAP, HR, business, analytics and artificial intelligence.</p></div></div>
+      <div class="cert-filter-controls" role="group" aria-label="Filter professional credentials by subject">
+ <button type="button" class="cert-filter is-active" data-cert-filter="all" aria-pressed="true">All Credentials</button>
+ <button type="button" class="cert-filter" data-cert-filter="enterprise" aria-pressed="false">SAP &amp; Enterprise</button>
+ <button type="button" class="cert-filter" data-cert-filter="hr" aria-pressed="false">HR &amp; People</button>
+ <button type="button" class="cert-filter" data-cert-filter="ai" aria-pressed="false">AI &amp; Digital</button>
+ <button type="button" class="cert-filter" data-cert-filter="business" aria-pressed="false">Business &amp; Analytics</button>
+ </div>
+ <div class="cert-results" role="status" aria-live="polite"><span id="cert-visible-count">14</span> professional credentials &amp; learning highlights</div>
+ <div class="cert-grid" id="certifications-list"><article class="cert-card credential-card brand-sap" data-cert-category="enterprise">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="SAP identity">
+      <img src="https://www.google.com/s2/favicons?domain=sap.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">SAP</span>
+    </div>
+    <span class="cert-kind">PROFESSIONAL CREDENTIAL</span>
+  </div>
+  <h3>SAP Professional Consultant</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: SAP</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-sap" data-cert-category="enterprise">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="SAP identity">
+      <img src="https://www.google.com/s2/favicons?domain=sap.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">SAP</span>
+    </div>
+    <span class="cert-kind">PROFESSIONAL LEARNING</span>
+  </div>
+  <h3>SAP Designing Solution</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: SAP</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-shrm" data-cert-category="hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="SHRM identity">
+      <img src="https://www.google.com/s2/favicons?domain=shrm.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">SHRM</span>
+    </div>
+    <span class="cert-kind">HR DEVELOPMENT</span>
+  </div>
+  <h3>SHRM Advanced Knowledge and Competencies</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: SHRM</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-aihr" data-cert-category="hr ai">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="AIHR identity">
+      <img src="https://www.google.com/s2/favicons?domain=aihr.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">AIHR</span>
+    </div>
+    <span class="cert-kind">HR DIGITAL LEARNING</span>
+  </div>
+  <h3>HR Digitally — AIHR</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: AIHR</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-hrci" data-cert-category="hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="HRCI identity">
+      <img src="https://www.google.com/s2/favicons?domain=hrci.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">HRCI</span>
+    </div>
+    <span class="cert-kind">HR CERTIFICATION</span>
+  </div>
+  <h3>PHRi — Professional in Human Resources, International</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: HRCI</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-hrci" data-cert-category="hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="HRCI identity">
+      <img src="https://www.google.com/s2/favicons?domain=hrci.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">HRCI</span>
+    </div>
+    <span class="cert-kind">HR CERTIFICATION</span>
+  </div>
+  <h3>HRCI Human Resource Associate</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: HRCI</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-hrci" data-cert-category="hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="HRCI / Learning identity">
+      <img src="https://www.google.com/s2/favicons?domain=hrci.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">HRCI / Learning</span>
+    </div>
+    <span class="cert-kind">HR DEVELOPMENT</span>
+  </div>
+  <h3>Associate Certificate in Human Resource Management</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: HRCI / Learning</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-shrm" data-cert-category="hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="SHRM Learning identity">
+      <img src="https://www.google.com/s2/favicons?domain=shrm.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">SHRM Learning</span>
+    </div>
+    <span class="cert-kind">HR LEARNING</span>
+  </div>
+  <h3>Foundations of SHRM Certification</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: SHRM Learning</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-hrci" data-cert-category="business hr">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="HRCI / Learning identity">
+      <img src="https://www.google.com/s2/favicons?domain=hrci.org&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">HRCI / Learning</span>
+    </div>
+    <span class="cert-kind">GOVERNANCE</span>
+  </div>
+  <h3>Compliance and Risk Management</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: HRCI / Learning</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-ibm" data-cert-category="ai">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="IBM / Coursera identity">
+      <img src="https://www.google.com/s2/favicons?domain=ibm.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">IBM / Coursera</span>
+    </div>
+    <span class="cert-kind">GENERATIVE AI</span>
+  </div>
+  <h3>Generative AI: Introduction and Applications</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: IBM / Coursera</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-linkedin" data-cert-category="business">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="LinkedIn Learning identity">
+      <img src="https://www.google.com/s2/favicons?domain=linkedin.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">LinkedIn Learning</span>
+    </div>
+    <span class="cert-kind">BUSINESS PLANNING</span>
+  </div>
+  <h3>Create a Business Plan</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: LinkedIn Learning</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-ibmi" data-cert-category="business">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="IBMI identity">
+      <span class="cert-monogram" aria-hidden="true">▥</span>
+      <span class="cert-brand-wordmark">IBMI</span>
+    </div>
+    <span class="cert-kind">FINANCIAL MANAGEMENT</span>
+  </div>
+  <h3>Financial Performance</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: IBMI</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-data" data-cert-category="business ai">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="Learning identity">
+      <span class="cert-monogram" aria-hidden="true">◈</span>
+      <span class="cert-brand-wordmark">Learning</span>
+    </div>
+    <span class="cert-kind">DATA ANALYTICS</span>
+  </div>
+  <h3>Analyze Your Data</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: Learning</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article>
+<article class="cert-card credential-card brand-google" data-cert-category="business ai">
+  <div class="cert-top">
+    <div class="cert-logo" aria-label="Google Ads identity">
+      <img src="https://www.google.com/s2/favicons?domain=ads.google.com&amp;sz=128" alt="" width="36" height="36" loading="lazy" decoding="async">
+      <span class="cert-brand-wordmark">Google Ads</span>
+    </div>
+    <span class="cert-kind">DIGITAL MARKETING</span>
+  </div>
+  <h3>Google Ads Apps Certification</h3>
+  <div class="cert-footer"><span class="cert-issuer">Issued / Learning: Google Ads</span><span class="cert-corner" aria-hidden="true">↗</span></div>
+</article></div>
+ <p class="fine-note">Credential and course titles reflect the executive portfolio and additional titles supplied by Dr. Saied El Saharty. SAP, SHRM and AIHR titles are displayed as provided; issuing details and award dates can be specified from the certificates. Brand identifiers indicate providers, not third-party endorsement.</p>
     </div>
   </section>
   <section class="section" id="partners">
@@ -392,5 +580,53 @@
     if(location.hash==="#webinars"||location.hash==="#tools")open(location.hash.slice(1));
   })();
   </script>
-</body>
+
+<script>
+(function(){
+  "use strict";
+  var buttons=Array.prototype.slice.call(document.querySelectorAll("[data-cert-filter]"));
+  var cards=Array.prototype.slice.call(document.querySelectorAll("[data-cert-category]"));
+  var count=document.getElementById("cert-visible-count");
+  buttons.forEach(function(button){
+    button.addEventListener("click",function(){
+      var filter=button.getAttribute("data-cert-filter");
+      buttons.forEach(function(b){var active=b===button;b.classList.toggle("is-active",active);b.setAttribute("aria-pressed",active?"true":"false")});
+      var total=0;cards.forEach(function(card){var allowed=filter==="all"||(" "+card.getAttribute("data-cert-category")+" ").includes(" "+filter+" ");card.hidden=!allowed;if(allowed)total++});
+      if(count)count.textContent=String(total);
+    });
+  });
+  var reduced=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var supportsIO=("IntersectionObserver" in window);
+  if(!reduced&&supportsIO){
+    document.documentElement.classList.add("js-motion");
+    var elements=Array.prototype.slice.call(document.querySelectorAll(".section-heading,.achievement,.career-entry,.expertise-card,.cert-card,.partner-card,.training-gallery-card,.campaign-grid>div,.quote-grid blockquote,.resource-panel"));
+    var reveal=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add("is-visible");reveal.unobserve(entry.target)}});
+    },{threshold:.07,rootMargin:"0px 0px -25px 0px"});
+    elements.forEach(function(el,i){el.classList.add("motion-reveal");el.style.setProperty("--reveal-delay",(i%4*50)+"ms");reveal.observe(el)});
+  }
+  var bar=document.getElementById("scroll-progress"),top=document.getElementById("back-to-top"),scheduled=false;
+  function scrollState(){
+    var range=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
+    var percent=Math.min(100,Math.max(0,window.scrollY/range*100));
+    if(bar)bar.style.width=percent+"%";
+    if(top)top.classList.toggle("is-visible",window.scrollY>460);
+    scheduled=false;
+  }
+  window.addEventListener("scroll",function(){if(!scheduled){scheduled=true;window.requestAnimationFrame(scrollState)}},{passive:true});
+  window.addEventListener("resize",scrollState,{passive:true});scrollState();
+  if(top)top.addEventListener("click",function(){window.scrollTo({top:0,behavior:reduced?"instant":"smooth"})});
+  function animateCount(el){
+    if(el.dataset.animated==="true")return;
+    el.dataset.animated="true";var target=Number(el.dataset.counter),suffix=el.dataset.suffix||"";
+    if(reduced||!Number.isFinite(target)){el.textContent=target.toLocaleString("en-US")+suffix;return;}
+    var start=0,duration=1250;
+    function step(t){if(!start)start=t;var progress=Math.min(1,(t-start)/duration);var eased=1-Math.pow(1-progress,3);el.textContent=Math.round(target*eased).toLocaleString("en-US")+suffix;if(progress<1)requestAnimationFrame(step);}
+    requestAnimationFrame(step);
+  }
+  var counters=Array.prototype.slice.call(document.querySelectorAll("[data-counter]"));
+  if(supportsIO){var counterObserver=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){animateCount(e.target);counterObserver.unobserve(e.target)}})},{threshold:.8});counters.forEach(function(c){counterObserver.observe(c)})}
+  else counters.forEach(function(c){animateCount(c)});
+})();
+</script></body>
 </html>
