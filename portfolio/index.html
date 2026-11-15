@@ -316,17 +316,32 @@ html{scroll-padding-top:95px}
 .js-motion .section-heading,.js-motion .editorial-photo,.js-motion .creative-scene,.js-motion .resource-image-hero,.js-motion .academic-illustration,.js-motion .credential-brand-showcase{opacity:1!important;transform:none!important}
 .brand-shrm .cert-logo img,.cert-logo:has(img[src*="shrm-mark"]) img{width:118px!important;height:55px!important;object-fit:contain!important;padding:2px!important;background:#f5f7fb!important}
 .shrm-showcase img{object-fit:contain!important}
+
+/* Personal identity and direct, team-only communication channels */
+.header .brand-sub{font-size:11px;font-weight:800;letter-spacing:.025em;color:#e5bd63}
+.hero-alias{display:flex;align-items:center;gap:12px;flex-wrap:wrap;font-size:17px;font-weight:800;color:#e4b959;letter-spacing:.02em;margin:-7px 0 21px}
+.hero-alias .alias-separator{width:1px;height:17px;background:rgba(219,182,93,.58)}
+.hero-alias>span:last-child{font-size:11px;font-weight:700;color:#afc2d6;letter-spacing:.08em;text-transform:uppercase}
+.team-contact-note{font-size:12px!important;color:#d3dfec!important;margin-top:12px!important}
+.team-contact-actions{display:flex;flex-direction:column;align-items:flex-start;gap:12px;position:relative;z-index:2;flex-shrink:0}
+.team-contact-actions .action{min-width:200px;max-width:100%;width:100%}
+.team-contact-actions .action.secondary{background:transparent;border-color:rgba(255,255,255,.48)}
+.team-contact-details{display:flex;flex-direction:column;gap:5px;margin-top:4px;color:#aec0d6;font-size:11px;line-height:1.7;overflow-wrap:anywhere}
+.team-contact-details strong{font-weight:800;color:#fff}
+.closing-inner{padding-right:270px}
+@media(max-width:900px){.closing-inner{padding-right:165px}}
+@media(max-width:770px){.hero-alias{font-size:15px;margin:0 0 19px;gap:9px}.hero-alias>span:last-child{font-size:9px}.team-contact-actions{width:100%;align-items:stretch}.team-contact-actions .action{min-width:0}.closing-inner{padding-right:0}.closing-portrait{opacity:.23!important}.header .brand-sub{font-size:10px}}
 </style>
 </head>
 <body><div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div><button type="button" id="back-to-top" class="back-to-top" aria-label="Return to the top of the page" title="Back to top">↑</button>
   <header class="header">
     <div class="shell header-inner">
       <a class="brand" href="#top" aria-label="Saied El Saharty home">
-        <div class="brand-mark">SE</div><div class="brand-words"><span class="brand-name">DR. SAIED EL SAHARTY</span><span class="brand-sub">BUSINESS • STRATEGY • AI</span></div>
+        <div class="brand-mark">SE</div><div class="brand-words"><span class="brand-name">DR. SAIED EL SAHARTY</span><span class="brand-sub">Dr. Koliverastein</span></div>
       </a>
       <nav class="header-nav" aria-label="Main website navigation">
   <a href="#academic-qualifications">Degrees</a><a href="#career">Experience</a><a href="#certifications">Credentials</a><a href="#partners">Clients</a><a href="#resources">Resources</a>
-</nav><a class="top-cta" href="mailto:saiedsahaarty@gmail.com">Let's Connect ↗</a>
+</nav><a class="top-cta" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Contact my team on WhatsApp only">WhatsApp the Team ↗</a>
     </div>
   </header>
   <main>
@@ -334,7 +349,7 @@ html{scroll-padding-top:95px}
       <div class="shell hero-grid">
         <div>
           <div class="eyebrow">STRATEGIC THINKING. PRACTICAL IMPACT.</div>
-          <h1>Dr. Saied<br><span>El Saharty.</span></h1>
+          <h1>Dr. Saied<br><span>El Saharty.</span></h1><div class="hero-alias">Dr. Koliverastein <span class="alias-separator" aria-hidden="true"></span><span>Business Solutions &amp; AI</span></div>
           <div class="hero-lead">Business Solutions. Strategy, Growth & Transformation.</div>
           <p class="hero-desc">Business Solutions Consultant, Strategic Advisor and Executive Trainer with 15+ years of cross-industry experience in Egypt and the GCC. Bridging business strategy, operations, marketing, financial performance, people development and AI-driven transformation to turn challenges into practical results.</p>
           <div class="roles"><span class="role-pill">Business Strategy &amp; Growth</span><span class="role-pill">Operations &amp; Performance</span><span class="role-pill">Marketing &amp; Business Development</span><span class="role-pill">AI &amp; Digital Transformation</span><span class="role-pill">HR &amp; Organizational Solutions</span></div>
@@ -718,12 +733,12 @@ html{scroll-padding-top:95px}
     </section>
     <section class="closing" id="contact">
       <div class="shell closing-inner"><img class="closing-portrait" src="./hero-saied.webp" alt="Dr. Saied El Saharty, Business Solutions Consultant" loading="lazy" decoding="async">
-        <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Business consulting, strategic planning, growth and marketing, operating-model improvement, organizational transformation, professional training and practical AI adoption — grounded in real business needs.</p></div>
-        <a class="action primary" href="mailto:saiedsahaarty@gmail.com?subject=Consulting%20%26%20Collaboration%20Inquiry">Get in Touch ↗</a>
+        <div><div class="section-kicker">LET'S CREATE VALUE</div><h2>From business challenges<br>to practical solutions.</h2><p>Business consulting, strategic planning, growth and marketing, operating-model improvement, organizational transformation, professional training and practical AI adoption — grounded in real business needs.</p><p class="team-contact-note">For collaborations and business inquiries, connect directly with my team via WhatsApp or email.</p></div>
+        <div class="team-contact-actions"><a class="action primary" href="https://wa.me/201024335473" target="_blank" rel="noopener noreferrer" aria-label="Message the team on WhatsApp at 01024335473"><span aria-hidden="true">◉</span> Team WhatsApp <span aria-hidden="true">↗</span></a><a class="action secondary" href="mailto:saiedsahaarty@gmail.com?subject=Business%20Consulting%20Inquiry">Send Email <span aria-hidden="true">↗</span></a><div class="team-contact-details"><span>WhatsApp only: <strong>01024335473</strong></span><span>Email: <strong>saiedsahaarty@gmail.com</strong></span></div></div>
       </div>
     </section>
   </main>
-  <footer class="footer"><div class="shell footer-inner"><span><b>© <span id="year"></span> Dr. Saied El Saharty.</b> All rights reserved.</span><span>Independent professional portfolio. Training reference is not an institutional endorsement. <a href="#top">Back to top ↑</a></span></div></footer>
+  <footer class="footer"><div class="shell footer-inner"><span><b>© <span id="year"></span> Dr. Saied El Saharty · Dr. Koliverastein.</b> All rights reserved.</span><span>Independent professional portfolio. Training reference is not an institutional endorsement. <a href="#top">Back to top ↑</a></span></div></footer>
   <div class="overlay" id="collection-overlay" aria-hidden="true" role="presentation">
     <section class="modal" role="dialog" aria-modal="true" aria-labelledby="collection-title">
       <div class="modal-head"><div><div class="modal-kicker" id="collection-kicker">RESOURCE LIBRARY</div><h2 id="collection-title">Winners Webinars</h2><div class="modal-sub" id="collection-subtitle"></div></div><button class="close-btn" id="close-modal" aria-label="Close collection">×</button></div>
