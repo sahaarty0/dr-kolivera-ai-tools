@@ -79,3 +79,12 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Editorial covers are intentionally custom CSS designs, **not purported frames/screenshots from the video**. One featured card uses an existing user-supplied workshop photo, explicitly marked as a representative photo. All links open original Facebook Reels in new tabs, because inline Facebook embeds can be restricted by login/privacy.
 - Category filters update the visible card count. Bilingual English/Arabic labels are provided for all major user-facing section content.
 - Preserve link authorship/source and do not replace any of the supplied Reel IDs with guesses. Revalidate any Linktree or short TikTok links if they change.
+
+## Mobile-first finalization — November 15, 2026
+- Added responsive, accessible mobile hamburger navigation with all major sections, correct `aria-expanded`, Escape/outside dismiss, and close-on-navigation behavior.
+- Added mobile bottom quick actions for Business Solutions and team **WhatsApp messages only** (01024335473), with safe-area padding that keeps content unobstructed.
+- Removed duplicate header language toggle; Arabic/English translation remains functional.
+- Added two distinct visitor journeys (business owners/executives vs. professional learners), four-step How I Work service process, and six concise bilingual FAQs without inventing fees or promising free consultations.
+- Full front-end QA via a temporary same-origin iframe test harness at viewport widths **320, 360, 390, 430, 768, 1024 px**. Tests passed: **no horizontal document overflow, no header-brand/control overlap, menu open + close on link, mobile sticky actions and body padding, Arabic and English switching at 390 px**.
+- Existing 11 personal Reels, 9 Winners webinars, 14 listed resources, Executive Portfolio PDF and contact channels preserved.
+- Temporary QA page removed after testing.
