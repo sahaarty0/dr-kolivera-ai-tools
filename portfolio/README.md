@@ -38,3 +38,9 @@ The owner requested Lovable as the intended visual builder. This first deployed 
 - Upgraded CV Analyzer destination to the exact Apps Script web app URL explicitly supplied by the owner:
   https://script.google.com/macros/s/AKfycbyWeqCbTL0M0emixAhxL40howEVTN-7tnSFQfEW7yV-JM12secssCLk9tvIdyF3eu2iIQ/exec
 - Pending unverified links reduced to two historical resource entries: Ministerial Decision 162/2026 and Compliance Guide 19.
+
+## November 2026 positioning and photo updates
+- Homepage positioning corrected at the owner's direction to **Business Solutions & Transformation Consultant**, not HR Leadership only. Focus now includes strategy, operations/process improvement, marketing/business development, financial performance, AI/digital transformation and HR/organization solutions.
+- Homepage original studio photo uploaded as `hero-saied.webp`; displayed next to hero copy with no frame, card, or border. Dark photo background blends into the site's navy hero.
+- Seven user-supplied workshop/training photos uploaded as `training-gallery.webp` (optimized contact-sheet/sprite) and displayed in an accessible seven-card **Training & Workshops in Action** section.
+- Facebook and materials collections, links and removed HR Maturity Assessment remain unchanged.
